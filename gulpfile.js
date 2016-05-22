@@ -17,6 +17,8 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 //rename files
 var rename = require('gulp-rename');
+//open files
+var open = require('gulp-open');
 
 /**
  * Gulp Tasks
@@ -38,7 +40,7 @@ var rename = require('gulp-rename');
 
  // Concatenate & Minify JS
  gulp.task('scripts', function() {
-     return gulp.src('public/js/*.js')
+     return gulp.src('/public/js/*.js')
          .pipe(concat('all.js'))
          .pipe(gulp.dest('dist'))
          .pipe(rename('all.min.js'))
@@ -52,6 +54,12 @@ var rename = require('gulp-rename');
      gulp.watch('scss/*.scss', ['sass']);
      gulp.watch(['views/**', 'public/**', '.js', 'routes/**', 'test/**'], ['test']);
  });
+
+//open view
+gulp.task('open', function(){
+  gulp.src('/public/views/index.html')
+  .pipe(open());
+});
 
 //Run tests
  gulp.task('test', function () {
