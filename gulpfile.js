@@ -51,7 +51,7 @@ var open = require('gulp-open');
  // Watch Files For Changes
  gulp.task('watch', function() {
      gulp.watch('/public/js/*.js', ['lint', 'scripts']);
-     gulp.watch('scss/*.scss', ['sass']);
+     gulp.watch('/public/scss/*.scss', ['sass']);
      gulp.watch(['views/**', 'public/**', '.js', 'routes/**', 'test/**'], ['test']);
  });
 
