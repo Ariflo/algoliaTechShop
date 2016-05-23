@@ -4,29 +4,29 @@ var gulp = require('gulp');
 *Gulp plug-ins
 */
 //mocha for testing 
-var mocha = require('gulp-mocha');
+var mocha = require('gulp-mocha')
 //util to log errors
-var util = require('gulp-util');
+, util = require('gulp-util')
 //linter to verify js files
-var jshint = require('gulp-jshint');
+, jshint = require('gulp-jshint')
 //to compile sass files
-var sass = require('gulp-sass');
+, sass = require('gulp-sass')
 //concatnates JS files
-var concat = require('gulp-concat');
+, concat = require('gulp-concat')
 //minitfy JS files
-var uglify = require('gulp-uglify');
+, uglify = require('gulp-uglify')
 //rename files
-var rename = require('gulp-rename');
+, rename = require('gulp-rename')
 //run server
-var nodemon = require('gulp-nodemon')
+, nodemon = require('gulp-nodemon')
 //open browser
-var open = require('gulp-open');
+, open = require('gulp-open')
 //operating system
-var os = require('os');
+, os = require('os')
 //browser-sync
-var browserSync = require('browser-sync').create();
+, browserSync = require('browser-sync').create()
 //reload browser on every change
-var reload = require('gulp-livereload');
+, reload = require('gulp-livereload');
 
 //set browser
 var browser = os.platform() === 'linux' ? 'google-chrome' : (
@@ -76,22 +76,24 @@ gulp.task('launch', function(){
 	});
 })
 
-//Run tests
+//refresh browser
+gulp.task('client-watch', function() {
+    browserSync.reload();
+});
+
+//run tests
  gulp.task('test', function () {
      return gulp.src(['test/**/*.js'], { read: false })
          .pipe(mocha({ reporter: 'spec' }))
          .on('error', util.log);
  });
 
-gulp.task('client-watch', ['test', 'sass', 'scripts'], browserSync.reload);
-
  // watch Files For Changes
  gulp.task('watch', function() {
      gulp.watch('public/js/*.js', ['lint', 'scripts']);
      gulp.watch('public/stylesheets/scss/*.scss', ['sass']);
-     gulp.watch(['public/**', 'test/**'], ['test']);
-     gulp.watch("public/**", ['client-watch']);
+     gulp.watch(['public/**', 'test/**'], ['test', 'client-watch']);
  });
 
  // *** default task *** //
- gulp.task('default', ['lint', 'sass', 'scripts','launch', 'watch', 'test'], function(){});
+ gulp.task('default', ['launch', 'lint', 'sass', 'scripts', 'watch', 'test'], function(){});
