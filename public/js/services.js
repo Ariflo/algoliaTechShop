@@ -1,5 +1,5 @@
 //Found on http://stackoverflow.com/questions/21749878/angular-js-anchorscroll-smooth-duration
-ariApp.service('anchorSmoothScroll', function(){
+algoliaApp.service('anchorSmoothScroll', function(){
     
     this.scrollTo = function(eID) {
 

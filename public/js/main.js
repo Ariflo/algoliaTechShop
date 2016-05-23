@@ -1,4 +1,4 @@
 // add scripts
-window.onload = function() {
+// window.onload = function() {
 
-};
+// };

@@ -1,6 +1,6 @@
-var algoliaApp = angular.module('ariApp', ['ngRoute', 'ngAnimate']);
+var algoliaApp = angular.module('algoliaApp', ['ngRoute', 'ngAnimate']);
 
-ariApp.config(function($routeProvider, $locationProvider, $httpProvider){
+algoliaApp.config(function($routeProvider, $locationProvider, $httpProvider){
 
 	$routeProvider
 

@@ -17,8 +17,21 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 //rename files
 var rename = require('gulp-rename');
-//open files
+//run server
+var nodemon = require('gulp-nodemon')
+//open browser
 var open = require('gulp-open');
+//operating system
+var os = require('os');
+//browser-sync
+var browserSync = require('browser-sync').create();
+//reload browser on every change
+var reload = require('gulp-livereload');
+
+//set browser
+var browser = os.platform() === 'linux' ? 'google-chrome' : (
+  os.platform() === 'darwin' ? 'google chrome' : (
+  os.platform() === 'win32' ? 'chrome' : 'firefox'));
 
 /**
  * Gulp Tasks
@@ -33,33 +46,35 @@ var open = require('gulp-open');
 
  // Compile Our Sass
  gulp.task('sass', function() {
-     return gulp.src('/public/scss/*.scss')
+     return gulp.src('/public/stylesheets/scss/*.scss')
          .pipe(sass())
-         .pipe(gulp.dest('dist/css'));
+         .pipe(gulp.dest('/public/stylesheets/css'));
  });
 
  // Concatenate & Minify JS
  gulp.task('scripts', function() {
      return gulp.src('/public/js/*.js')
          .pipe(concat('all.js'))
-         .pipe(gulp.dest('dist'))
+         .pipe(gulp.dest('/public/js'))
          .pipe(rename('all.min.js'))
          .pipe(uglify())
-         .pipe(gulp.dest('dist/js'));
+         .pipe(gulp.dest('/public/js'));
  });
 
- // Watch Files For Changes
- gulp.task('watch', function() {
-     gulp.watch('/public/js/*.js', ['lint', 'scripts']);
-     gulp.watch('/public/scss/*.scss', ['sass']);
-     gulp.watch(['views/**', 'public/**', '.js', 'routes/**', 'test/**'], ['test']);
- });
+//run server
+gulp.task('launch', function(){
+	//launch server at on 8080
+	nodemon({
+		 script: 'server.js'
+		, ext: 'js'
+		, env: { 'NODE_ENV': 'development' }
+	})
 
-//open view
-gulp.task('open', function(){
-  gulp.src('/public/views/index.html')
-  .pipe(open());
-});
+	//launch browser
+	browserSync.init({
+	    proxy: 'localhost:8080'
+	});
+})
 
 //Run tests
  gulp.task('test', function () {
@@ -68,5 +83,15 @@ gulp.task('open', function(){
          .on('error', util.log);
  });
 
+gulp.task('client-watch', ['test', 'sass', 'scripts'], browserSync.reload);
+
+ // watch Files For Changes
+ gulp.task('watch', function() {
+     gulp.watch('public/js/*.js', ['lint', 'scripts']);
+     gulp.watch('public/stylesheets/scss/*.scss', ['sass']);
+     gulp.watch(['public/**', 'test/**'], ['test']);
+     gulp.watch("public/**", ['client-watch']);
+ });
+
  // *** default task *** //
- gulp.task('default', ['test', 'lint', 'sass', 'scripts', 'watch'], function(){});
+ gulp.task('default', ['lint', 'sass', 'scripts','launch', 'watch', 'test'], function(){});

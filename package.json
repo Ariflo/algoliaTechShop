@@ -4,27 +4,35 @@
   "description": "algolia instant search demo",
   "main": "index.html",
   "dependencies": {
+    "body-parser": "^1.15.1",
+    "chai": "^3.5.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
     "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
     "gulp-mocha": "^2.2.0",
     "gulp-open": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "supertest": "^1.2.0",
-    "supertest-session": "^2.0.1",
     "locus": "^1.2.0",
-    "body-parser": "^1.15.1",
-    "chai": "^3.5.0",
-    "express": "^4.13.4",
     "method-override": "^2.3.6",
     "mocha": "^2.4.5",
     "morgan": "^1.7.0",
-    "sass": "^0.5.0"
+    "os": "^0.1.1",
+    "sass": "^0.5.0",
+    "serve-favicon": "^2.3.0",
+    "supertest": "^1.2.0",
+    "supertest-session": "^2.0.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-jshint": "^2.0.1",
+    "gulp-nodemon": "^2.0.7",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
-    "gulp-uglify": "^1.5.3"
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.2"
   },
   "scripts": {
     "test": "mocha"
