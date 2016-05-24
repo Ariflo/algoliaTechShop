@@ -30,19 +30,19 @@ Wire Frame Layouts
 -
 **Homepage**
 
-![wireframe](homepage.jpg)
+![wireframe](public/assets/images/homepage.jpg)
 
 **Item Modal**
 
-![wireframe](modal.jpg)
+![wireframe](public/assets/images/modal.jpg)
 
 **Menu**
     
-![wireframe](menu.jpg)
+![wireframe](public/assets/images/menu.jpg)
 
 **Cart**
     
-![wireframe](cart.jpg)
+![wireframe](public/assets/images/cart.jpg)
 
 
  
