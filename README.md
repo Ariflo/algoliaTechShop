@@ -11,21 +11,18 @@ If you have the latest versions of [git](https://git-scm.com/book/en/v2/Getting-
 
 ```
 git clone https://github.com/Ariflo/algoliaTechShop/tree/master
-
 ```
 
 Once you've got a local copy enter this into your command line to install the dependencies:
 
 ```
 npm install --save--dev
-
 ```
 
 Then launch the site locally with gulp:
 
 ```
 npm run gulp --build-dev
-
 ```
 
 
