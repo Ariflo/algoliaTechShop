@@ -40,7 +40,6 @@ var browser = os.platform() === 'linux' ? 'google-chrome' : (
  // Lint Task
  gulp.task('lint', function() {
      return gulp.src('public/js/*.js')
-         .concat('!public/js/**/*.min.js')
          .pipe(jshint())
          .pipe(jshint.reporter('default'));
  });
@@ -56,7 +55,7 @@ var browser = os.platform() === 'linux' ? 'google-chrome' : (
  gulp.task('scripts', function() {
      return gulp.src('public/js/*.js')
          .pipe(concat('all.js'))
-         .pipe(gulp.dest('public/js'))
+         .pipe(gulp.dest('public'))
          .pipe(rename('all.min.js'))
          .pipe(uglify())
          .pipe(gulp.dest('public/js'));
@@ -92,8 +91,8 @@ gulp.task('client-watch', function() {
  // watch Files For Changes
  gulp.task('watch', function() {
      gulp.watch('public/js/*.js', ['lint', 'scripts']);
-     gulp.watch('public/stylesheets/scss/*.scss', ['sass']);
-     gulp.watch(['public/**', 'test/**'], ['test', 'client-watch']);
+     gulp.watch('public/stylesheets/sass/*.scss', ['sass']);
+     gulp.watch(['public/**','test/**'], ['test', 'client-watch']);
  });
 
  // *** default task *** //

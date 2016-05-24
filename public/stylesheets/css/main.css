@@ -3,5 +3,5 @@ html, body {
 
 .navbar {
   background: #00171F; }
-  .navbar a {
+  .navbar .navbar-brand {
     color: #ffffff; }
