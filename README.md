@@ -10,7 +10,7 @@ A complete version of this site has been deployed and can be viewed on this [gh-
 If you have the latest versions of [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Node](https://nodejs.org/en/) (if on a mac you will also need [x-code](https://developer.apple.com/xcode/downloads/) ) installed on your local enviorment you can setup a copy this site by pasting the following into your terminal's command line: 
 
 ```
-git clone https://github.com/Ariflo/algoliaTechShop/tree/master
+git clone https://github.com/Ariflo/algoliaTechShop/
 ```
 
 Once you've got a local copy enter this into your command line to install the dependencies:
