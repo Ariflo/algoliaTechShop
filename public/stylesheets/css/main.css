@@ -39,3 +39,8 @@ html, body {
     border-bottom: 2px solid #D8DBE2;
     padding-bottom: .5%;
     text-decoration: none; }
+
+.searhBar {
+  float: right;
+  width: 25%;
+  margin: .5% 5%; }
