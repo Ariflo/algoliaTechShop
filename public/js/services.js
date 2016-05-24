@@ -22,7 +22,7 @@ algoliaApp.service('anchorSmoothScroll', function(){
                 leapY += step; if (leapY > stopY) leapY = stopY; timer++;
             } return;
         }
-        for ( var i=startY; i>stopY; i-=step ) {
+        for ( var j=startY; j>stopY; j-=step ) {
             setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
             leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
         }

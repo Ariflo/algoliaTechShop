@@ -39,26 +39,27 @@ var browser = os.platform() === 'linux' ? 'google-chrome' : (
 
  // Lint Task
  gulp.task('lint', function() {
-     return gulp.src('/public/js/*.js')
+     return gulp.src('public/js/*.js')
+         .concat('!public/js/**/*.min.js')
          .pipe(jshint())
          .pipe(jshint.reporter('default'));
  });
 
  // Compile Our Sass
- gulp.task('sass', function() {
-     return gulp.src('/public/stylesheets/scss/*.scss')
-         .pipe(sass())
-         .pipe(gulp.dest('/public/stylesheets/css'));
+ gulp.task('sass', function () {
+   return gulp.src('public/stylesheets/sass/**/*.scss')
+     .pipe(sass().on('error', sass.logError))
+     .pipe(gulp.dest('public/stylesheets/css'));
  });
 
  // Concatenate & Minify JS
  gulp.task('scripts', function() {
-     return gulp.src('/public/js/*.js')
+     return gulp.src('public/js/*.js')
          .pipe(concat('all.js'))
-         .pipe(gulp.dest('/public/js'))
+         .pipe(gulp.dest('public/js'))
          .pipe(rename('all.min.js'))
          .pipe(uglify())
-         .pipe(gulp.dest('/public/js'));
+         .pipe(gulp.dest('public/js'));
  });
 
 //run server
