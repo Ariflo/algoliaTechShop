@@ -4,4 +4,10 @@ html, body {
 .navbar {
   background: #00171F; }
   .navbar .navbar-brand {
-    color: #ffffff; }
+    color: #ffffff;
+    font-family: 'Futura';
+    font-size: 1.5em;
+    text-shadow: .5px .5px .5px #ffffff; }
+    .navbar .navbar-brand:hover, .navbar .navbar-brand:active {
+      text-decoration: none;
+      color: #00769f; }
