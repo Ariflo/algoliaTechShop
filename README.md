@@ -26,8 +26,24 @@ npm run gulp --build-dev
 ```
 
 
-##Wire Frame
+Wire Frame Layouts
+-
+**Homepage**
 
- 
+![wireframe](public/assets/images/homepage.jpg)
+
+**Item Modal**
+
+![wireframe](public/assets/images/modal.jpg)
+
+**Menu**
+    
+![wireframe](public/assets/images/menu.jpg)
+
+**Cart**
+    
+![wireframe](public/assets/images/cart.jpg)
+
+
 
  
