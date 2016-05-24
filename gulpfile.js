@@ -55,7 +55,7 @@ var browser = os.platform() === 'linux' ? 'google-chrome' : (
  gulp.task('scripts', function() {
      return gulp.src('public/js/*.js')
          .pipe(concat('all.js'))
-         .pipe(gulp.dest('public'))
+         .pipe(gulp.dest('public/js'))
          .pipe(rename('all.min.js'))
          .pipe(uglify())
          .pipe(gulp.dest('public/js'));
@@ -90,7 +90,7 @@ gulp.task('client-watch', function() {
 
  // watch Files For Changes
  gulp.task('watch', function() {
-     gulp.watch('public/js/*.js', ['lint', 'scripts']);
+     gulp.watch('public/js/*.js', ['lint']);
      gulp.watch('public/stylesheets/sass/*.scss', ['sass']);
      gulp.watch(['public/**','test/**'], ['test', 'client-watch']);
  });

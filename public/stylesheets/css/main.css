@@ -1,13 +1,41 @@
 html, body {
-  background: #007EA7; }
+  background: #373F51; }
 
 .navbar {
-  background: #00171F; }
+  background: #1B1B1E; }
   .navbar .navbar-brand {
-    color: #ffffff;
-    font-family: 'Futura';
-    font-size: 1.5em;
-    text-shadow: .5px .5px .5px #ffffff; }
+    color: #D8DBE2;
+    font-family: 'didot';
+    font-size: 1.75em;
+    text-shadow: .5px .5px .5px #ffffff;
+    position: relative;
+    z-index: 1000; }
     .navbar .navbar-brand:hover, .navbar .navbar-brand:active {
       text-decoration: none;
-      color: #00769f; }
+      color: #58A4B0; }
+
+.glyphicon.glyphicon-shopping-cart {
+  padding-top: 1%;
+  padding-right: 1%;
+  float: right;
+  color: #ffffff;
+  font-size: 2em;
+  position: relative; }
+
+.navbarlinks {
+  margin: auto;
+  padding-left: 10%;
+  bottom: 25%;
+  width: 100%;
+  position: absolute; }
+
+.link {
+  font-family: 'arial';
+  font-size: 15px;
+  margin: 5%;
+  color: #D8DBE2; }
+  .link:hover {
+    transition: 0.5s ease;
+    border-bottom: 2px solid #D8DBE2;
+    padding-bottom: .5%;
+    text-decoration: none; }
