@@ -26,7 +26,7 @@ npm run gulp --build-dev
 ```
 
 
-Wire Frame Layouts
+<!--Wire Frame Layouts
 -
 **Homepage**
 
@@ -42,7 +42,7 @@ Wire Frame Layouts
 
 **Cart**
     
-![wireframe](public/assets/images/cart.jpg)
+![wireframe](public/assets/images/cart.jpg)-->
 
 
 
