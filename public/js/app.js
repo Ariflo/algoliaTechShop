@@ -1,9 +1,8 @@
-var algoliaApp = angular.module('algoliaApp', ['ngRoute', 'ngAnimate']);
+var algoliaApp = angular.module('algoliaApp', ['ngRoute', 'ngAnimate', 'algoliasearch']);
 
 algoliaApp.config(function($routeProvider, $locationProvider, $httpProvider){
 
 	$routeProvider
-
 	//landing page 
 	.when('/',{
 		templateUrl: '/views/homepage.html',
