@@ -3,14 +3,19 @@
 		<a class="navbar-brand" ng-href='/'>AL's Tech</a>
 
 		<div class="navbarlinks">
-			<a class="link" ng-href='/'>Category</a>
+			<a class="link" ng-click="showCategories()">Category</a>
 			<a class="link" ng-href='/'>Price</a>
 			<a class="link" ng-href='/'>Brand</a>
 			<a class="link" ng-href='/'>Type</a>
 		</div>
+		<div class="navBarMenu" ng-if="showDropdown">
+			<label class="checkbox-inline" ng-repeat="category in categories | unique:'category'">
+			  <input type="checkbox"  ng-checked="">{{category}}
+			</label>
+		</div>
 
 		<span class="glyphicon glyphicon-shopping-cart" ng-href='/'></span>
-		<input id="search-box" class="form-control" type="text" placeholder="Search">	
+		<input id="search-box" class="form-control" type="text" ng-model="query" ng-change="algoliaSearch()"  placeholder="Search">	
 	</div>
 </div>
 <div class="grid">

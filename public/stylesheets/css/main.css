@@ -85,3 +85,8 @@ html, body {
 
 .highlight {
   box-shadow: 5px 5px 5px #000000; }
+
+.navBarMenu {
+  background: #ffffff;
+  width: 10em;
+  height: 10em; }
