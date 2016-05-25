@@ -81,19 +81,12 @@ gulp.task('client-watch', function() {
     browserSync.reload();
 });
 
-//run tests
- gulp.task('test', function () {
-     return gulp.src(['test/**/*.js'], { read: false })
-         .pipe(mocha({ reporter: 'spec' }))
-         .on('error', util.log);
- });
-
  // watch Files For Changes
  gulp.task('watch', function() {
      gulp.watch('public/js/*.js', ['lint']);
      gulp.watch('public/stylesheets/sass/*.scss', ['sass']);
-     gulp.watch(['public/**','test/**'], ['test', 'client-watch']);
+     gulp.watch(['public/**'], ['client-watch']);
  });
 
  // *** default task *** //
- gulp.task('default', ['launch', 'lint', 'sass', 'scripts', 'watch', 'test'], function(){});
+ gulp.task('default', ['launch', 'lint', 'sass', 'scripts', 'watch'], function(){});

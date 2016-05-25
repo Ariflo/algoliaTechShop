@@ -9,10 +9,9 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 		  index.clearCache();
 
 		  $scope.algoliaSearch = function (){
-		  	index.search($scope.query)
+		  	index.search($scope.query, {hitsPerPage: 10000})
 		  	.then(function searchSuccess(content) {
 		  	     	$scope.techGoods = content.hits;
-		  	     	console.log($scope.techGoods);
 		  	}, function searchFailure(err) {
 		  	     	console.log(err);
 		  	})

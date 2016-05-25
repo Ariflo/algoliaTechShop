@@ -71,11 +71,38 @@ html, body{
 	};
 }
 
-.searhBar{
+#search-box{
 	float:right;
 	width: 25%;
 	margin: .5% 5%;
 }
+
+.grid{
+	max-width: 100%;
+	margin: 0 5%;
+	&:after{
+	  content: '';
+	  display: block;
+	  clear: both;
+	}
+}
+
+.grid-item { 
+	float: left;
+	 width: 12%;
+	 margin-bottom: 10px;
+	& img {
+	  display: block;
+	  max-width: 100%;
+	}
+}
+
+.grid-sizer{
+   width: 12%;
+}
+
+
+
 
 
 

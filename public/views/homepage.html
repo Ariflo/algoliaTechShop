@@ -10,8 +10,10 @@
 		</div>
 
 		<span class="glyphicon glyphicon-shopping-cart" ng-href='/'></span>
-		<input class="searhBar form-control" type="text" placeholder="Search">	
+		<input id="search-box" class="form-control" type="text" placeholder="Search">	
 	</div>
 </div>
-
-<div class="grid-item" ><img src="{{}}" alt="bestbuy item"></div>
+<div class="grid">
+	<div class="grid-sizer"></div>
+	<div class="grid-item" ng-repeat="tech in techGoods" ><img ng-src="{{tech.image}}" alt="bestbuy item"></div>
+</div>
