@@ -40,9 +40,5 @@ Wire Frame Layouts
     
 ![wireframe](public/assets/images/menu.jpg)
 
-**Cart**
-    
-![wireframe](public/assets/images/cart.jpg)
-
 
  
