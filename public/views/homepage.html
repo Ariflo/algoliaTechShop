@@ -9,9 +9,13 @@
 			<a class="link" ng-href='/'>Type</a>
 		</div>
 		<div class="navBarMenu" ng-if="showDropdown">
-			<label class="checkbox-inline" ng-repeat="category in categories | unique:'category'">
-			  <input type="checkbox"  ng-checked="">{{category}}
-			</label>
+			<ul>
+				<li class="categoryList" ng-repeat="category in categories | unique:'category'">
+					<label class="checkbox-inline">
+					  	<input type="checkbox"  ng-checked="">{{category}}
+					</label>
+				</li>
+			</ul>
 		</div>
 
 		<span class="glyphicon glyphicon-shopping-cart" ng-href='/'></span>
