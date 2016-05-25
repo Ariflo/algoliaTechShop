@@ -11,7 +11,17 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 		  $scope.algoliaSearch = function (){
 		  	index.search($scope.query, {hitsPerPage: 10000})
 		  	.then(function searchSuccess(content) {
-		  	     	$scope.techGoods = content.hits;
+		  	     	$scope.products = content.hits;
+
+		  	     	$scope.product.url = $scope.products.url;
+		  	     	$scope.product.image = $scope.products.image;
+		  	     	$scope.product.type = $scope.products.type;
+		  	     	$scope.product.name = $scope.products.name;
+		  	     	$scope.product.price = $scope.products.price;
+		  	     	$scope.product.description =  $scope.products.description;
+		  	     	$scope.product.type = $scope.products.type;
+ 
+
 		  	}, function searchFailure(err) {
 		  	     	console.log(err);
 		  	})

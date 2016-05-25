@@ -15,5 +15,28 @@
 </div>
 <div class="grid">
 	<div class="grid-sizer"></div>
-	<div class="grid-item" ng-repeat="tech in techGoods" ><img ng-src="{{tech.image}}" alt="bestbuy item"></div>
+	<div class="grid-item" ng-repeat="tech in products" ><img ng-src="{{tech.image}}" alt="bestbuy item"></div>
 </div>
+
+<modal visible="showProduct">
+     <a ng-href="{{product.url}}">
+	<img class="productImg" ng-src="{{product.image}}" alt="{{product.type}}">
+     </a>
+
+    <div id="productView">
+            <h4 class="modalHeader text-center">{{product.name}}</h4>
+
+            <p class="productPrice">{{product.price}}</p>
+
+            <p class="productPopulartiy"><b>Popularity</b><span class="rating">***</span></p>
+    </div>  
+
+    <div id="productDetails">
+            <div class="productDescription">
+                    <p><b>{{product.description}}</b></p>
+                    <div>
+                        <p id="productType">{{product.type}}</p>
+                    </div>
+            </div>
+    </div>
+</modal>
