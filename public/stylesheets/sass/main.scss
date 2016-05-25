@@ -89,13 +89,14 @@ html, body{
 
 .grid-item { 
 	float: left;
-	width: 20%;
-	padding: 1em; 
+	width: 25%;
+	margin: 1em; 
 	border-radius: 50%;
 	& img {
 		  display: block;
-		  max-width: 100%;
-		  border-radius: 5px;
+		  height: 20em;
+		  width:20em;
+		  border-radius: 50%;
 		}
 	&:hover{
 		@include holographic
@@ -105,7 +106,7 @@ html, body{
 
 
 .grid-sizer{
- 	width: 20%;
+ 	width: 25%;
 }
 
 .highlight{

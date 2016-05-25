@@ -56,13 +56,14 @@ html, body {
 
 .grid-item {
   float: left;
-  width: 20%;
-  padding: 1em;
+  width: 25%;
+  margin: 1em;
   border-radius: 50%; }
   .grid-item img {
     display: block;
-    max-width: 100%;
-    border-radius: 5px; }
+    height: 20em;
+    width: 20em;
+    border-radius: 50%; }
   .grid-item:hover {
     background: -moz-linear-gradient(left top, rgba(224, 224, 209, 0.2), rgba(235, 235, 224, 0.8));
     /* FF3.6+ */
@@ -80,7 +81,7 @@ html, body {
     /* IE6-9 */ }
 
 .grid-sizer {
-  width: 20%; }
+  width: 25%; }
 
 .highlight {
   box-shadow: 5px 5px 5px #000000; }
