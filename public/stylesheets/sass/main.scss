@@ -127,13 +127,28 @@ html, body{
 	position: absolute;
 }
 
-#priceMenu{
-	margin: 4%;
-	background: #ffffff;
-	width: 50%;
-	position: absolute;
-}
-
 .categoryList{
 	list-style: none;
 }
+
+#priceMenu{
+	@extend #categoryMenu;
+	width: 50%;	
+}
+
+#brandsMenu{
+	@extend #categoryMenu;
+} 
+
+.brandsList{
+           @extend categoryList;
+}
+
+#typesMenu{
+	@extend #categoryMenu;
+}
+
+.typesMenu{
+            @extend categoryList;
+}
+

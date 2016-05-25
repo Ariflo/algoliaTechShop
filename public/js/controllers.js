@@ -5,12 +5,35 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 	            $scope.showProduct = false;                         		
 	            $scope.showDropdown = false;                         		
 	            $scope.displayPrice = false;                         		
+	            $scope.displayBrands = false;                         		
+	            $scope.displayTypes = false;                         		
 
 	            //initialize search, hits, categories and product
 	             $scope.query = '';
 	             $scope.hits = [];   
 	             $scope.categories = [];
 	             $scope.product = {};
+
+	             $scope.categories = ['Computers & Tablets', 
+	                                                           'Cell Phones', 
+	                                                           'Appliances', 
+	                                                           'Audio', 
+	                                                           'Cameras & Camcorders', 
+	                                                           'TV & Home Theater', 
+	                                                           'Car Electronics & GPS', 
+	                                                           'Office',
+	                                                           'Health, Fitness & Beauty',
+	                                                           'Home',
+	                                                           'Video Games',
+	                                                           'Wearable Technology',
+	                                                           'Name Brands',
+	                                                           'Best Buy Gift Cards',
+	                                                           'Musical Instruments',
+	                                                           'Movies & Music',
+	                                                           'Magnolia Home Theater',
+	                                                           'Batteries & Power',
+	                                                           'Carfi Instore Only',
+	                                                           'Microwaves' ]
 
 		  var client = algolia.Client('W8I2YD0GJC', '861d0757703675d68f5a0f915072381b');
 		  var index = client.initIndex('tech_shop_data');
@@ -20,10 +43,6 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 		  // 		      console.log('success');
 		  // 		    }
 		 	// 	});
-		
-
-
-
 
 		  index.clearCache();
 
@@ -42,11 +61,11 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 		  		.then(function searchSuccess(content) {
 		  		     	$scope.products = content.hits;
 
-		  		     	$scope.products.forEach(function(product){
-		  		     		for(var i = 0; i<product.categories.length; i++){
-		  		     			$scope.categories.push(product.categories[i]);
-		  		     		}
-		  		     	})
+		  		     	// $scope.products.forEach(function(product){
+		  		     	// 	for(var i = 0; i<product.categories.length; i++){
+		  		     	// 		$scope.categories.push(product.categories[i]);
+		  		     	// 	}
+		  		     	// })
 		  		}, function searchFailure(err) {
 		  		     	console.log(err);
 		  		})
@@ -60,6 +79,14 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 
 		 $scope.showPrice = function(){
 		 	$scope.displayPrice = !$scope.displayPrice; 
+		 }
+
+		 $scope.showBrands = function(){
+		 	$scope.displayBrands = !$scope.displayBrands; 
+		 }		 
+
+		 $scope.showTypes = function(){
+		 	$scope.displayTypes = !$scope.displayTypes; 
 		 }
 
 		 $scope.slider = {

@@ -5,8 +5,8 @@
 		<div class="navbarlinks">
 			<a class="link" ng-click="showCategories()">Category</a>
 			<a class="link" ng-click="showPrice()">Price</a>
-			<a class="link" ng-href='/'>Brand</a>
-			<a class="link" ng-href='/'>Type</a>
+			<a class="link" ng-click="showBrands()">Brand</a>
+			<a class="link" ng-click="showTypes()">Type</a>
 		</div>
 
 		<span class="glyphicon glyphicon-shopping-cart" ng-href='/'></span>
@@ -18,7 +18,7 @@
 
 	<div id="categoryMenu" ng-if="showDropdown">
 		<ul>
-			<li class="categoryList" ng-repeat="category in categories | unique:'category'">
+			<li class="categoryList" ng-repeat="category in categories">
 				<label class="checkbox-inline">
 				  	<input type="checkbox"  ng-checked="">{{category}}
 				</label>
@@ -34,6 +34,26 @@
 		            <input type="number" ng-model="slider.max" />
 		            <br/>
 		            <rzslider rz-slider-model="slider.min" rz-slider-high="slider.max" rz-slider-options="slider.options"></rzslider>
+	</div>
+	
+	<div id="brandsMenu" ng-if="displayBrands">
+		<ul>
+			<li class="brandsList"  ng-repeat="brand in products | unique:'brand' ">
+				<label class="checkbox-inline">
+				  	<input type="checkbox"  ng-checked="">{{brand}}
+				</label>
+			</li>
+		</ul>
+	</div>	
+
+	<div id="typesMenu" ng-if="displayTypes">
+		<ul>
+			<li class="typesList"  ng-repeat="type in products  | unique:'type'">
+				<label class="checkbox-inline">
+				  	<input type="checkbox"  ng-checked="">{{type}}
+				</label>
+			</li>
+		</ul>
 	</div>
 <!-- </div> -->
 

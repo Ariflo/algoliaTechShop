@@ -91,7 +91,7 @@ html, body {
 	flex-direction: row;
 	max-width: 100%;
 }*/
-#categoryMenu {
+#categoryMenu, #brandsMenu, #typesMenu {
   margin: 4%;
   background: #ffffff;
   width: 30%;
