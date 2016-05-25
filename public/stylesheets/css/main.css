@@ -86,10 +86,21 @@ html, body {
 .highlight {
   box-shadow: 5px 5px 5px #000000; }
 
-.navBarMenu {
+/*.customMenu{
+	display: flex;
+	flex-direction: row;
+	max-width: 100%;
+}*/
+#categoryMenu {
+  margin: 4%;
   background: #ffffff;
   width: 30%;
-  margin-top: 4%;
+  position: absolute; }
+
+#priceMenu {
+  margin: 4%;
+  background: #ffffff;
+  width: 50%;
   position: absolute; }
 
 .categoryList {

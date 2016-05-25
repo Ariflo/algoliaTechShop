@@ -1,4 +1,4 @@
-var algoliaApp = angular.module('algoliaApp', ['ngRoute', 'ngAnimate', 'algoliasearch']);
+var algoliaApp = angular.module('algoliaApp', ['ngRoute', 'ngAnimate', 'algoliasearch', 'rzModule']);
 
 algoliaApp.config(function($routeProvider, $locationProvider, $httpProvider){
 

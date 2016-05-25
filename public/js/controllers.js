@@ -4,6 +4,7 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 	            //hide modal form         
 	            $scope.showProduct = false;                         		
 	            $scope.showDropdown = false;                         		
+	            $scope.displayPrice = false;                         		
 
 	            //initialize search, hits, categories and product
 	             $scope.query = '';
@@ -55,5 +56,21 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 
 		 $scope.showCategories = function(){
 		 	$scope.showDropdown = !$scope.showDropdown; 
+		 }		 
+
+		 $scope.showPrice = function(){
+		 	$scope.displayPrice = !$scope.displayPrice; 
 		 }
+
+		 $scope.slider = {
+		   min: 100,
+		   max: 180,
+		   options: {
+		     floor: 0,
+		     ceil: 450,
+		     translate: function(value) {
+		       return '$' + value;
+		     }
+		   }
+		 };
 }]);
