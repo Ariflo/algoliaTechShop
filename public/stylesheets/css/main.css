@@ -15,7 +15,7 @@ html, body {
       text-decoration: none;
       color: #58A4B0; }
 
-.glyphicon.glyphicon-shopping-cart {
+.glyphicon.glyphicon-off {
   padding-top: 1%;
   padding-right: 1%;
   float: right;
@@ -91,17 +91,14 @@ html, body {
 	flex-direction: row;
 	max-width: 100%;
 }*/
-#categoryMenu, #brandsMenu, #typesMenu {
+#categoryMenu, #priceMenu, #brandsMenu, #typesMenu {
   margin: 4%;
   background: #ffffff;
   width: 30%;
   position: absolute; }
 
-#priceMenu {
-  margin: 4%;
-  background: #ffffff;
-  width: 50%;
-  position: absolute; }
-
-.categoryList {
+.categoryList, .brandsList, .typesList {
   list-style: none; }
+
+#priceMenu {
+  width: 50%; }

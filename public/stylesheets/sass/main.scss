@@ -39,7 +39,7 @@ html, body{
 
 }
 
-.glyphicon.glyphicon-shopping-cart{
+.glyphicon.glyphicon-off{
 	padding-top: 1%;
 	padding-right: 1%;
 	float: right;
@@ -141,14 +141,14 @@ html, body{
 } 
 
 .brandsList{
-           @extend categoryList;
+           @extend .categoryList;
 }
 
 #typesMenu{
 	@extend #categoryMenu;
 }
 
-.typesMenu{
-            @extend categoryList;
+.typesList{
+            @extend .categoryList;
 }
 

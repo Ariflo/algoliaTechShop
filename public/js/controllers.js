@@ -33,7 +33,7 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 	                                                           'Magnolia Home Theater',
 	                                                           'Batteries & Power',
 	                                                           'Carfi Instore Only',
-	                                                           'Microwaves' ]
+	                                                           'Microwaves' ];
 
 		  var client = algolia.Client('W8I2YD0GJC', '861d0757703675d68f5a0f915072381b');
 		  var index = client.initIndex('tech_shop_data');
@@ -68,7 +68,7 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 		  		     	// })
 		  		}, function searchFailure(err) {
 		  		     	console.log(err);
-		  		})
+		  		});
 		  	}
 		 }
 		 $scope.algoliaSearch();
