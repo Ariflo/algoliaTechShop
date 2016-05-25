@@ -15,7 +15,7 @@
 </div>
 <div class="grid">
 	<div class="grid-sizer"></div>
-	<div class="grid-item" ng-repeat="tech in products" ><img ng-src="{{tech.image}}" alt="bestbuy item"></div>
+	<div class="grid-item" ng-repeat="tech in products" ng-click="algoliaSearch(tech)" ><img ng-src="{{tech.image}}" alt="bestbuy item"></div>
 </div>
 
 <modal visible="showProduct">
