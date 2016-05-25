@@ -46,32 +46,37 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 
 		  index.clearCache();
 
-		  $scope.algoliaSearch = function (product){
-		  	if(product){
-		  		$scope.showProduct = !$scope.showProduct;
-		  		$scope.product.url = product.url;
-		  		$scope.product.image = product.image;
-		  		$scope.product.type = product.type;
-		  		$scope.product.name = product.name;
-		  		$scope.product.price = product.price;
-		  		$scope.product.description = product.description;
-		  		$scope.product.type = product.type;
-		  	}else{
-		  		index.search($scope.query, {hitsPerPage: 10000})
+		  $scope.algoliaSearch = function (query){
+		  	if(query){
+		  		console.log(query);
+		  		index.search(query, {hitsPerPage: 20})
 		  		.then(function searchSuccess(content) {
 		  		     	$scope.products = content.hits;
-
-		  		     	// $scope.products.forEach(function(product){
-		  		     	// 	for(var i = 0; i<product.categories.length; i++){
-		  		     	// 		$scope.categories.push(product.categories[i]);
-		  		     	// 	}
-		  		     	// })
 		  		}, function searchFailure(err) {
 		  		     	console.log(err);
 		  		});
+		  	}else{
+		  		index.search($scope.query, {hitsPerPage: 20})
+		  		.then(function searchSuccess(content) {
+		  		     	$scope.products = content.hits;
+		  		}, function searchFailure(err) {
+		  		     	console.log(err);
+		  		});	
 		  	}
+
 		 }
 		 $scope.algoliaSearch();
+
+		 $scope.productLookup = function(product){
+		 	$scope.showProduct = !$scope.showProduct;
+		 	$scope.product.url = product.url;
+		 	$scope.product.image = product.image;
+		 	$scope.product.type = product.type;
+		 	$scope.product.name = product.name;
+		 	$scope.product.price = product.price;
+		 	$scope.product.description = product.description;
+		 	$scope.product.type = product.type;
+		 }
 
 		 $scope.showCategories = function(){
 		 	$scope.showDropdown = !$scope.showDropdown; 
@@ -100,4 +105,5 @@ algoliaApp.controller('homeController', ['$scope', '$http', '$parse', '$location
 		     }
 		   }
 		 };
+
 }]);

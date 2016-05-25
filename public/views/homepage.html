@@ -20,7 +20,7 @@
 		<ul>
 			<li class="categoryList" ng-repeat="category in categories">
 				<label class="checkbox-inline">
-				  	<input type="checkbox"  ng-checked="">{{category}}
+				  	<input type="checkbox">{{category}}
 				</label>
 			</li>
 		</ul>
@@ -59,7 +59,7 @@
 
 <div class="grid">
 	<div class="grid-sizer"></div>
-	<div class="grid-item" ng-repeat="tech in products" ng-click="algoliaSearch(tech)" ><img ng-src="{{tech.image}}" alt="bestbuy item"></div>
+	<div class="grid-item" ng-repeat="tech in products | filter: category" ng-click="productLookup(tech)" ><img ng-src="{{tech.image}}" alt="bestbuy item"></div>
 </div>
 
 <modal visible="showProduct">
