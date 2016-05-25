@@ -48,7 +48,7 @@ html, body {
 
 .grid {
   max-width: 100%;
-  margin: 0 5%; }
+  margin: 0 2%; }
   .grid:after {
     content: '';
     display: block;
@@ -56,11 +56,10 @@ html, body {
 
 .grid-item {
   float: left;
-  width: 12%;
-  margin-bottom: 10px; }
+  max-width: 100%; }
   .grid-item img {
     display: block;
     max-width: 100%; }
 
-.grid-sizer {
-  width: 12%; }
+.highlight {
+  box-shadow: 5px 5px 5px #000000; }

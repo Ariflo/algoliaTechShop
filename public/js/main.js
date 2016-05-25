@@ -6,13 +6,17 @@ $(function() {
 			itemSelector: '.grid-item',
 			columnWidth:  '.grid-sizer',
 			percentPosition: true,
-			gutter: 10
+			fitWidth: true
 			});
 
 	// layout Masonry after each image loads
 	$grid.imagesLoaded().progress( function() {
 	  $grid.masonry('layout');
 	});
+
+	$grid.masonry( 'on', 'mouseover', function (e) {
+		e.target.toggleClass('highlight');
+	})
 }); 
 
 
