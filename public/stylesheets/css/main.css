@@ -1,12 +1,12 @@
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 html, body {
-  background: #373F51;
+  background: #F7F3E3;
   max-width: 100%; }
 
 .navbar {
-  background: #1B1B1E; }
+  background: #816C61; }
   .navbar .navbar-brand {
-    color: #D8DBE2;
+    color: #767B91;
     font-family: "didot";
     font-size: 1.75em;
     text-shadow: .5px .5px .5px #ffffff;
@@ -35,13 +35,16 @@ html, body {
   font-family: 'arial';
   font-size: 15px;
   margin: 5%;
-  color: #D8DBE2; }
+  color: #767B91; }
   .categoryLink:hover, .priceLink:hover, .brandLink:hover, .typeLink:hover {
     transition: 0.5s ease;
-    border-bottom: 2px solid #D8DBE2;
+    border-bottom: 2px solid #767B91;
     padding-bottom: .5%;
     color: #5EFC8D;
     text-decoration: none; }
+
+#categoryMenu, #priceMenu, #brandsMenu, #typesMenu, #priceMenu, #brandsMenu, #typesMenu {
+  display: none; }
 
 #search-box {
   float: right;
@@ -60,34 +63,23 @@ html, body {
   margin: 1%;
   padding-right: 3%;
   padding-bottom: 3%;
-  border-radius: 5px; }
-  .productItem:hover {
-    background: -moz-linear-gradient(left top, rgba(224, 224, 209, 0.2), rgba(235, 235, 224, 0.8));
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, bottom right, color-stop(rgba(224, 224, 209, 0.2)), color-stop(rgba(235, 235, 224, 0.8)));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left top, rgba(224, 224, 209, 0.2), rgba(235, 235, 224, 0.8));
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left top, rgba(224, 224, 209, 0.2), rgba(235, 235, 224, 0.8));
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(left top, rgba(224, 224, 209, 0.2), rgba(235, 235, 224, 0.8));
-    /* IE10+ */
-    background: linear-gradient(to bottom right, rgba(224, 224, 209, 0.2), rgba(235, 235, 224, 0.8));
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(224, 224, 209, .2)', endColorstr='rgba(235, 235, 224, .8)',GradientType=0 );
-    /* IE6-9 */ }
+  background: #ccccbd;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888868; }
 
 #prodPic {
   float: left;
   height: 14em;
   width: 14em;
   border-radius: 5px; }
+  #prodPic:hover {
+    box-shadow: 5px 5px 5px #000000; }
 
 #title {
   float: right;
   font-family: "didot";
   font-size: 1.75em;
-  color: #D8DBE2;
+  color: #767B91;
   width: 60%;
   margin: 0 .025%; }
 
@@ -95,7 +87,7 @@ html, body {
   float: right;
   font-family: "georgia";
   font-size: 1em;
-  color: #D45113;
+  color: #035E7B;
   width: 60%;
   margin: .25% .025%; }
 
@@ -103,12 +95,12 @@ html, body {
   float: right;
   font-family: "didot";
   font-size: 3em;
-  color: #D8DBE2;
+  color: #767B91;
   clear: both; }
 
 #popularity {
   float: left;
-  color: #D8DBE2;
+  color: #767B91;
   clear: both; }
 
 #categoryMenu, #priceMenu, #brandsMenu, #typesMenu {

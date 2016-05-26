@@ -1,10 +1,10 @@
-$main-base: #373F51;
-$secondary-base: #1B1B1E;
-$text-base: #D8DBE2;
+$main-base: #F7F3E3;
+$secondary-base: #816C61;
+$text-base: #767B91;
 $hover-base: #5EFC8D;
 $heading-font: 'didot';
 $paragraph-font: 'georgia';
-$paragraph-base: #D45113;
+$paragraph-base: #035E7B;
 
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
@@ -78,6 +78,10 @@ html, body{
 	};
 }
 
+#categoryMenu, #priceMenu, #brandsMenu, #typesMenu{
+	display:none;
+}
+
 #search-box{
 	float:right;
 	width: 25%;
@@ -98,11 +102,9 @@ html, body{
 	margin: 1%;
 	padding-right: 3%;
 	padding-bottom: 3%; 
-
+	background: lighten(#A0A083, 20%);
 	border-radius: 5px;
-	&:hover{
-		@include holographic
-	};
+	box-shadow: 5px 5px 5px darken(#A0A083, 10%);
 }
 
 #prodPic{
@@ -110,6 +112,9 @@ html, body{
 	height: 14em;
 	width:14em;
 	border-radius: 5px;	
+	&:hover{
+		box-shadow: 5px 5px 5px #000000;
+	}
 }
 
 #title{
