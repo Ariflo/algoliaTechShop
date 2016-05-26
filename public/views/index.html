@@ -8,7 +8,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js" charset="utf-8"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
        <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-      <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
       <script src="//cdn.jsdelivr.net/angularjs/1.5.5/angular.min.js"></script>
       <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.angular.min.js"></script>
       <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
@@ -77,15 +76,7 @@
                       <rzslider rz-slider-model="slider.min" rz-slider-high="slider.max" rz-slider-options="slider.options"></rzslider>
         </div>
         
-        <div id="brandsMenu" ng-if="displayBrands">
-          <ul>
-            <li class="brandsList"  ng-repeat="brand in products | unique:'brand' ">
-              <label class="checkbox-inline">
-                  <input type="checkbox"  ng-checked="">{{brand}}
-              </label>
-            </li>
-          </ul>
-        </div>  
+        <div id="brandsMenu"></div>
 
         <div id="typesMenu" ng-if="displayTypes">
           <ul>

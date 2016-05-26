@@ -1,5 +1,7 @@
 $main-base: #373F51;
 $secondary-base: #1B1B1E;
+$text-base: #D8DBE2;
+$hover-base: #5EFC8D;
 
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
@@ -23,7 +25,7 @@ html, body{
 	background: $secondary-base;
 
 	.navbar-brand {
-		color: #D8DBE2;
+		color: $text-base;
 		font-family: 'didot';
 		font-size: 1.75em;
 		text-shadow: .5px .5px .5px #ffffff; 
@@ -34,7 +36,7 @@ html, body{
 			text:{
 				decoration: none;
 			};
-			color: #58A4B0;
+			color: $hover-base;
 		};
 	}
 
@@ -61,11 +63,12 @@ html, body{
 	font-family: 'arial';
 	font-size: 15px;
 	margin: 5%;
-	color: #D8DBE2;
+	color: $text-base;
 	&:hover{
 		 transition: 0.5s ease;
-		 border-bottom: 2px solid #D8DBE2;
+		 border-bottom: 2px solid $text-base;
 		 padding-bottom: .5%;
+		 color: $hover-base;
 		text:{
 			decoration: none;
 		};
@@ -78,41 +81,31 @@ html, body{
 	margin: .5% 5%;
 }
 
-.grid{
-	max-width: 100%;
-	margin: 0 5%;
-	&:after{
-	  content: '';
-	  display: block;
-	  clear: both;
-	}
+/*#hits-container{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}*/
+
+.productItem{
+	display: inline;
 }
 
 .grid-item { 
-	float: left;
-	width: 25%;
-	margin: 1em; 
-	border-radius: 50%;
-	& img {
-		  display: block;
+	display: inline;
+	margin: 0;
+	width: 0;
+	border-radius: 5px;
+	& img{
 		  height: 20em;
 		  width:20em;
-		  border-radius: 50%;
+		  border-radius: 5px;
 		}
 	&:hover{
 		@include holographic
 	};
 }
 
-
-
-.grid-sizer{
- 	width: 25%;
-}
-
-.highlight{
-	box-shadow: 5px 5px 5px #000000;
-}
 
 #categoryMenu{
 	margin: 4%;

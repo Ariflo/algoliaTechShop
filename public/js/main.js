@@ -1,19 +1,6 @@
 // add scripts
 $(function() {
 
-	var $grid = $('.grid').masonry({
-			// options
-			itemSelector: '.grid-item',
-			columnWidth:  '.grid-sizer',
-			percentPosition: true,
-			fitWidth: true
-			});
-
-	// layout Masonry after each image loads
-	$grid.imagesLoaded().progress( function() {
-	  $grid.masonry('layout');
-	});
-
 	// algolia instantsearch widgets
 	var search = instantsearch({
 	       appId: 'W8I2YD0GJC',
@@ -31,11 +18,32 @@ $(function() {
 	search.addWidget(
 	  instantsearch.widgets.hits({
 	    container: '#hits-container',
+	    cssClasses:{
+	    	item: "productItem"
+	    		},
 	    templates: {
-	      item: "<div class='grid'><div class='grid-sizer'></div><div class='grid-item' ng-click='productLookup()''><img src='{{image}}' alt='bestbuy item'></div>"	
+	      item: function(data){
+	      	return '<div class="grid-item"><img id="'+ data.name +'" src="'+ data.image + '" alt="bestbuy item"></div>';
+	      }	
 	    }
 	  })
 	);
+
+	search.addWidget(
+	  instantsearch.widgets.refinementList({
+	    container: '#brandsMenu',
+	    attributeName: 'brand',
+	    operator: 'or',
+	    limit: 10,
+	    templates: {
+	      item: '<ul><li class="brandsList"><label class="checkbox-inline"><input type="checkbox"></label></li></ul>'
+	    }
+	  })
+	);
+
+	$('body').on("click","img", function (e) {
+		e.target.id
+	});
 
 	// <div class="grid"><div class="grid-sizer"></div><div class="grid-item" ng-click="productLookup(item)" ><img src="{{tech.image}}" alt="bestbuy item"></div></div>'
 	search.addWidget(

@@ -14,7 +14,7 @@ html, body {
     z-index: 1000; }
     .navbar .navbar-brand:hover, .navbar .navbar-brand:active {
       text-decoration: none;
-      color: #58A4B0; }
+      color: #5EFC8D; }
 
 .glyphicon.glyphicon-off {
   padding-top: 1%;
@@ -40,6 +40,7 @@ html, body {
     transition: 0.5s ease;
     border-bottom: 2px solid #D8DBE2;
     padding-bottom: .5%;
+    color: #5EFC8D;
     text-decoration: none; }
 
 #search-box {
@@ -47,24 +48,23 @@ html, body {
   width: 25%;
   margin: .5% 5%; }
 
-.grid {
-  max-width: 100%;
-  margin: 0 5%; }
-  .grid:after {
-    content: '';
-    display: block;
-    clear: both; }
+/*#hits-container{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}*/
+.productItem {
+  display: inline; }
 
 .grid-item {
-  float: left;
-  width: 25%;
-  margin: 1em;
-  border-radius: 50%; }
+  display: inline;
+  margin: 0;
+  width: 0;
+  border-radius: 5px; }
   .grid-item img {
-    display: block;
     height: 20em;
     width: 20em;
-    border-radius: 50%; }
+    border-radius: 5px; }
   .grid-item:hover {
     background: -moz-linear-gradient(left top, rgba(224, 224, 209, 0.2), rgba(235, 235, 224, 0.8));
     /* FF3.6+ */
@@ -80,12 +80,6 @@ html, body {
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(224, 224, 209, .2)', endColorstr='rgba(235, 235, 224, .8)',GradientType=0 );
     /* IE6-9 */ }
-
-.grid-sizer {
-  width: 25%; }
-
-.highlight {
-  box-shadow: 5px 5px 5px #000000; }
 
 #categoryMenu, #priceMenu, #brandsMenu, #typesMenu {
   margin: 4%;

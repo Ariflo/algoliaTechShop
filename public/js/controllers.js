@@ -61,6 +61,7 @@ algoliaApp.controller('mainController', ['$scope', '$http', '$parse', '$location
 		 $scope.algoliaSearch();
 
 		 $scope.productLookup = function(product){
+		 	
 		 	$scope.showProduct = !$scope.showProduct;
 		 	$scope.product.url = product.url;
 		 	$scope.product.image = product.image;
