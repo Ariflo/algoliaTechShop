@@ -1,17 +1,6 @@
-var algoliaApp = angular.module('algoliaApp', ['ngRoute', 'ngAnimate', 'algoliasearch', 'rzModule']);
+var algoliaApp = angular.module('algoliaApp', ['algoliasearch', 'rzModule']);
 
-algoliaApp.config(function($routeProvider, $locationProvider, $httpProvider){
-
-	$routeProvider
-	//landing page 
-	.when('/',{
-		templateUrl: '/views/homepage.html',
-        		controller: 'homeController'
-	})		
-
-	.otherwise({
-	        redirectTo: '/'
-	      });
+algoliaApp.config(function($locationProvider, $httpProvider){	
 
 	$locationProvider.html5Mode({
   		enabled: true,

@@ -1,6 +1,7 @@
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 html, body {
-  background: #373F51; }
+  background: #373F51;
+  max-width: 100%; }
 
 .navbar {
   background: #1B1B1E; }
@@ -86,11 +87,6 @@ html, body {
 .highlight {
   box-shadow: 5px 5px 5px #000000; }
 
-/*.customMenu{
-	display: flex;
-	flex-direction: row;
-	max-width: 100%;
-}*/
 #categoryMenu, #priceMenu, #brandsMenu, #typesMenu {
   margin: 4%;
   background: #ffffff;

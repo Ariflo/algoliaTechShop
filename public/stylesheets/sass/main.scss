@@ -16,6 +16,7 @@ $secondary-base: #1B1B1E;
 
 html, body{
 	background: $main-base;
+	max-width: 100%;
 }
 
 .navbar{
@@ -112,13 +113,6 @@ html, body{
 .highlight{
 	box-shadow: 5px 5px 5px #000000;
 }
-
-/*.customMenu{
-	display: flex;
-	flex-direction: row;
-	max-width: 100%;
-}*/
-
 
 #categoryMenu{
 	margin: 4%;

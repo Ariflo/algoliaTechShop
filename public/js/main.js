@@ -14,9 +14,37 @@ $(function() {
 	  $grid.masonry('layout');
 	});
 
-	$grid.masonry( 'on', 'mouseover', function (e) {
-		e.target.toggleClass('highlight');
-	})
+	// algolia instantsearch widgets
+	var search = instantsearch({
+	       appId: 'W8I2YD0GJC',
+	       apiKey: '861d0757703675d68f5a0f915072381b',
+	       indexName: 'tech_shop_data'
+	});
+
+	search.addWidget(
+             instantsearch.widgets.searchBox({
+               container: '#search-box',
+               placeholder: 'Search for products...'
+             })
+            );
+
+	search.addWidget(
+	  instantsearch.widgets.hits({
+	    container: '#hits-container',
+	    templates: {
+	      item: "<div class='grid'><div class='grid-sizer'></div><div class='grid-item' ng-click='productLookup()''><img src='{{image}}' alt='bestbuy item'></div>"	
+	    }
+	  })
+	);
+
+	// <div class="grid"><div class="grid-sizer"></div><div class="grid-item" ng-click="productLookup(item)" ><img src="{{tech.image}}" alt="bestbuy item"></div></div>'
+	search.addWidget(
+	  instantsearch.widgets.pagination({
+	    container: '#pagination-container'
+	  })
+	);
+
+	search.start();
 }); 
 
 
@@ -113,36 +141,3 @@ $(function() {
 	  // function getHeader(title) {
 	  //   return '<h5>' + title + '</h5>';
 	  // }
-
-
-
-
-	// var search = instantsearch({
-	//        appId: 'W8I2YD0GJC',
-	//        apiKey: 'YourSearchOnlyAPIKey',
-	//        indexName: '861d0757703675d68f5a0f915072381b'
-	//      });
-
-	//      search.addWidget(
-	//        instantsearch.widgets.searchBox({
-	//          container: '#search-box',
-	//          placeholder: 'Search for products...'
-	//        })
-	//      );
-
-	//      search.addWidget(
-	//        instantsearch.widgets.hits({
-	//          container: '#hits-container',
-	//          templates: {
-	//            item: 'Hit {{objectID}}: FIXME'
-	//          }
-	//        })
-	//      );
-
-	//      search.addWidget(
-	//        instantsearch.widgets.pagination({
-	//          container: '#pagination-container'
-	//        })
-	//      );
-
-	//      search.start();
