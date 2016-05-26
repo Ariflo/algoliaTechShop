@@ -1,4 +1,4 @@
-var algoliaApp = angular.module('algoliaApp', ['algoliasearch', 'rzModule']);
+var algoliaApp = angular.module('algoliaApp', ['algoliasearch']);
 
 algoliaApp.config(function($locationProvider, $httpProvider){	
 

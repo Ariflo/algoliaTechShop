@@ -7,18 +7,15 @@
   	<!-- jquey, masonry, algolia, slider and JS --> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js" charset="utf-8"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-       <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
       <script src="//cdn.jsdelivr.net/angularjs/1.5.5/angular.min.js"></script>
       <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.angular.min.js"></script>
       <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/2.1.0/rzslider.min.js"></script>
       <script type="text/javascript" src="/js/main.js"></script>
     
 
       <!-- bootstrap, stylesheet, and favicon --> 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/2.1.0/rzslider.min.css">
       <link rel="stylesheet" type="text/css" href="/stylesheets/css/main.css">
       
       <!-- angular -->
@@ -44,10 +41,10 @@
               <a class="navbar-brand" ng-href='/'>AL's Tech</a>
 
               <div class="navbarlinks">
-                <a class="link" ng-click="showCategories()">Category</a>
-                <a class="link" ng-click="showPrice()">Price</a>
-                <a class="link" ng-click="showBrands()">Brand</a>
-                <a class="link" ng-click="showTypes()">Type</a>
+                <a class="categoryLink">Category</a>
+                <a class="priceLink">Price</a>
+                <a class="brandLink">Brand</a>
+                <a class="typeLink">Type</a>
               </div>
 
               <a href='/'><span class="glyphicon glyphicon-off"></span></a>
@@ -56,65 +53,17 @@
       </div>
 
       <!-- HEADER SUB MENUs -->
-        <div id="categoryMenu" ng-if="showDropdown">
-          <ul>
-            <li class="categoryList" ng-repeat="category in categories">
-              <label class="checkbox-inline">
-                  <input type="checkbox">{{category}}
-              </label>
-            </li>
-          </ul>
-        </div>
+        <div id="categoryMenu"></div>
 
-        <div id="priceMenu" ng-if="displayPrice">
-           <h2>Range slider</h2>
-          Min Value:
-                      <input type="number" ng-model="slider.min" />
-                      <br/>Max Value:
-                      <input type="number" ng-model="slider.max" />
-                      <br/>
-                      <rzslider rz-slider-model="slider.min" rz-slider-high="slider.max" rz-slider-options="slider.options"></rzslider>
-        </div>
+        <div id="priceMenu"></div>
         
         <div id="brandsMenu"></div>
 
-        <div id="typesMenu" ng-if="displayTypes">
-          <ul>
-            <li class="typesList"  ng-repeat="type in products  | unique:'type'">
-              <label class="checkbox-inline">
-                  <input type="checkbox"  ng-checked="">{{type}}
-              </label>
-            </li>
-          </ul>
-        </div>
+        <div id="typesMenu"></div>
 
 
       <!-- HITS CONTAINER  -->
       <div id="hits-container"></div>
-      
-      <!-- PRODUCT MODAL -->
-      <modal visible="showProduct">
-         <a ng-href="{{product.url}}">
-            <img class="productImg" ng-src="{{product.image}}" alt="{{product.type}}">
-         </a>
-
-          <div id="productView">
-                  <h4 class="modalHeader text-center">{{product.name}}</h4>
-
-                  <p class="productPrice">{{product.price}}</p>
-
-                  <p class="productPopulartiy"><b>Popularity</b><span class="rating">***</span></p>
-          </div>  
-
-          <div id="productDetails">
-                  <div class="productDescription">
-                          <p><b>{{product.description}}</b></p>
-                          <div>
-                              <p id="productType">{{product.type}}</p>
-                          </div>
-                  </div>
-          </div>
-      </modal>
 
        <div id="pagination-container"></div>
   

@@ -23,8 +23,49 @@ $(function() {
 	    		},
 	    templates: {
 	      item: function(data){
-	      	return '<div class="grid-item"><img id="'+ data.name +'" src="'+ data.image + '" alt="bestbuy item"></div>';
-	      }	
+	      	if(data.popularity >= 0 && data.popularity < 1000){
+	      		data.popularity = '☆☆';
+			return '<a href="'+data.url+'"><img id="prodPic" src="'+ data.image + '" alt="bestbuy item"></a><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p> <span id="popularity"><h4>Rating</h4>'+data.popularity+' 2/5</span> <p id="price">$'+data.price+'</p>';
+
+		}else if(data.popularity >= 1000 && data.popularity < 5000 ){
+	      		data.popularity = '☆☆☆';
+			return '<a href="'+data.url+'"><img id="prodPic" src="'+ data.image + '" alt="bestbuy item"></a><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p> <span id="popularity"><h4>Rating</h4>'+data.popularity+' 3/5</span> <p id="price">$'+data.price+'</p>';
+
+	     	}else if(data.popularity >= 5000 && data.popularity < 8000 ){
+	      		data.popularity = '☆☆☆☆';
+			return '<a href="'+data.url+'"><img id="prodPic" src="'+ data.image + '" alt="bestbuy item"></a><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p> <span id="popularity"><h4>Rating</h4>'+data.popularity+' 4/5</span> <p id="price">$'+data.price+'</p>';
+
+	     	}else{
+	      		data.popularity = '☆☆☆☆☆';
+			return '<a href="'+data.url+'"><img id="prodPic" src="'+ data.image + '" alt="bestbuy item"></a><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p> <span id="popularity"><h4>Rating</h4>'+data.popularity+' 5/5</span> <p id="price">$'+data.price+'</p>';
+	     	}			
+	       }
+	    }
+	  })
+	);
+
+	search.addWidget(
+	  instantsearch.widgets.menu({
+	    container: '#categoryMenu',
+	    attributeName: 'categories',
+	    operator: 'or',
+	    limit: 10,
+	   templates:{
+	   	item: function(data){
+	   		return '<ul><li class="categoryList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>   <a>'+data.count+'</a></li></ul>'
+	   	}
+	       }
+	  })
+	  );
+
+	search.addWidget(
+	  instantsearch.widgets.rangeSlider({
+	    container: '#priceMenu',
+	    attributeName: 'price',
+	    tooltips: {
+	      format: function(formattedValue) {
+	        return '$' + formattedValue;
+	      }
 	    }
 	  })
 	);
@@ -34,18 +75,72 @@ $(function() {
 	    container: '#brandsMenu',
 	    attributeName: 'brand',
 	    operator: 'or',
-	    limit: 10,
-	    templates: {
-	      item: '<ul><li class="brandsList"><label class="checkbox-inline"><input type="checkbox"></label></li></ul>'
-	    }
+	    limit: 10
+	  })
+	);	
+
+	search.addWidget(
+	  instantsearch.widgets.refinementList({
+	    container: '#typesMenu',
+	    attributeName: 'type',
+	    operator: 'or',
+	    limit: 10
 	  })
 	);
 
-	$('body').on("click","img", function (e) {
-		e.target.id
-	});
+	$('.categoryLink').on("click", function () {
+		$('#categoryMenu').css("display", "block");
+	});	
 
-	// <div class="grid"><div class="grid-sizer"></div><div class="grid-item" ng-click="productLookup(item)" ><img src="{{tech.image}}" alt="bestbuy item"></div></div>'
+	$('#categoryMenu').on('mouseover', function(){
+		$('#categoryMenu').css("display", "block");
+	})	
+
+	$('#categoryMenu').on('mouseout', function(){
+		$('#categoryMenu').css("display", "none");
+	})	
+
+
+
+	$('.priceLink').on("click", function () {
+		$('#priceMenu').css("display", "block");
+	});	
+
+	$('#priceMenu').on('mouseover', function(){
+		$('#priceMenu').css("display", "block");
+	})	
+
+	$('#priceMenu').on('mouseout', function(){
+		$('#priceMenu').css("display", "none");
+	})	
+
+
+
+	$('.brandLink').on("click", function () {
+		$('#brandsMenu').css("display", "block");
+	});	
+
+	$('#brandsMenu').on('mouseover', function(){
+		$('#brandsMenu').css("display", "block");
+	})	
+
+	$('#brandsMenu').on('mouseout', function(){
+		$('#brandsMenu').css("display", "none");
+	})
+	
+
+	$('.typeLink').on("click", function () {
+		$('#typesMenu').css("display", "block");
+	});	
+
+	$('#typesMenu').on('mouseover', function(){
+		$('#typesMenu').css("display", "block");
+	})	
+
+	$('#typesMenu').on('mouseout', function(){
+		$('#typesMenu').css("display", "none");
+	})
+
 	search.addWidget(
 	  instantsearch.widgets.pagination({
 	    container: '#pagination-container'
@@ -54,98 +149,3 @@ $(function() {
 
 	search.start();
 }); 
-
-
-
-	  // app({
-	  //   appId: 'latency',
-	  //   apiKey: '6be0576ff61c053d5f9a3225e2a90f76',
-	  //   indexName: 'instant_search'
-	  // });
-
-	  // function app(opts) {
-	  //   var search = instantsearch({
-	  //     appId: opts.appId,
-	  //     apiKey: opts.apiKey,
-	  //     indexName: opts.indexName,
-	  //     urlSync: true
-	  //   });
-
-	  //   var widgets = [
-	  //     instantsearch.widgets.searchBox({
-	  //       container: '#search-input',
-	  //       placeholder: 'Search for products'
-	  //     }),
-	  //     instantsearch.widgets.hits({
-	  //       container: '#hits',
-	  //       hitsPerPage: 10,
-	  //       templates: {
-	  //         item: getTemplate('hit'),
-	  //         empty: getTemplate('no-results')
-	  //       }
-	  //     }),
-	  //     instantsearch.widgets.stats({
-	  //       container: '#stats'
-	  //     }),
-	  //     instantsearch.widgets.sortBySelector({
-	  //       container: '#sort-by',
-	  //       autoHideContainer: true,
-	  //       indices: [{
-	  //         name: opts.indexName, label: 'Most relevant'
-	  //       }, {
-	  //         name: opts.indexName + '_price_asc', label: 'Lowest price'
-	  //       }, {
-	  //         name: opts.indexName + '_price_desc', label: 'Highest price'
-	  //       }]
-	  //     }),
-	  //     instantsearch.widgets.pagination({
-	  //       container: '#pagination',
-	  //       scrollTo: '#search-input'
-	  //     }),
-	  //     instantsearch.widgets.refinementList({
-	  //       container: '#category',
-	  //       attributeName: 'categories',
-	  //       limit: 10,
-	  //       operator: 'or',
-	  //       templates: {
-	  //         header: getHeader('Category')
-	  //       }
-	  //     }),
-	  //     instantsearch.widgets.refinementList({
-	  //       container: '#brand',
-	  //       attributeName: 'brand',
-	  //       limit: 10,
-	  //       operator: 'or',
-	  //       templates: {
-	  //         header: getHeader('Brand')
-	  //       }
-	  //     }),
-	  //     instantsearch.widgets.rangeSlider({
-	  //       container: '#price',
-	  //       attributeName: 'price',
-	  //       templates: {
-	  //         header: getHeader('Price')
-	  //       }
-	  //     }),
-	  //     instantsearch.widgets.refinementList({
-	  //       container: '#type',
-	  //       attributeName: 'type',
-	  //       limit: 10,
-	  //       operator: 'and',
-	  //       templates: {
-	  //         header: getHeader('Type')
-	  //       }
-	  //     })
-	  //   ];
-
-	  //   widgets.forEach(search.addWidget, search);
-	  //   search.start();
-	  // }
-
-	  // function getTemplate(templateName) {
-	  //   return document.querySelector('#' + templateName + '-template').innerHTML;
-	  // }
-
-	  // function getHeader(title) {
-	  //   return '<h5>' + title + '</h5>';
-	  // }
