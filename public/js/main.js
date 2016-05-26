@@ -44,6 +44,8 @@ $(function() {
 	  })
 	);
 
+
+
 	search.addWidget(
 	  instantsearch.widgets.menu({
 	    container: '#categoryMenu',
@@ -143,7 +145,8 @@ $(function() {
 
 	search.addWidget(
 	  instantsearch.widgets.pagination({
-	    container: '#pagination-container'
+	    container: '#pagination-container',
+	     scrollTo: '#search-box'
 	  })
 	);
 
