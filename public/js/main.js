@@ -54,7 +54,7 @@ $(function() {
 	    limit: 10,
 	   templates:{
 	   	item: function(data){
-	   		return '<ul><li class="categoryList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>   <a>'+data.count+'</a></li></ul>'
+	   		return '<ul><li class="categoryList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span><a>'+data.count+'</a></span></li></ul>'
 	   	}
 	       }
 	  })
@@ -101,7 +101,6 @@ $(function() {
 	$('#categoryMenu').on('mouseout', function(){
 		$('#categoryMenu').css("display", "none");
 	})	
-
 
 
 	$('.priceLink').on("click", function () {
