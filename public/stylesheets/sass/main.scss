@@ -253,9 +253,11 @@ html, body{
 }
 
 .num{	
-	background: $main-base;
-	color: $text-base;
+	color: white;
 	width: 20em;
+	&:hover{
+		color: white;
+	};
 
 }
 

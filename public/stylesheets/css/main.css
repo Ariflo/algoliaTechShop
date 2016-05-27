@@ -174,9 +174,10 @@ html, body {
   background: #003B64; }
 
 .num {
-  background: #F7F3E3;
-  color: #FF686B;
+  color: white;
   width: 20em; }
+  .num:hover {
+    color: white; }
 
 #notFound {
   margin-left: 50%;
