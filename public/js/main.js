@@ -47,7 +47,7 @@ $(function() {
 	     	}
 
 	       },
-	       empty: '<div id="notFoundContainer"><h1 id="notFoundHeader">Sorry Snoopy cannot find what you seek...</h1><img id="notFound" src="../assets/images/notFound.gif"></div>'	
+	       empty: '<div id="notFoundContainer"><h1 id="notFoundHeader">Sorry Snoopy cannot find what you seek...</h1><img id="notFound" src="./assets/images/notFound.gif"></div>'	
 	    }
 	  })
 	);
