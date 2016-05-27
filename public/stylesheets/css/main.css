@@ -82,6 +82,9 @@ html, body {
 .productItem {
   float: left;
   width: 30%;
+  height: auto;
+  min-height: 35em;
+  max-height: 35em;
   margin: 1%;
   padding-right: 3%;
   padding-bottom: 3%;
@@ -111,10 +114,11 @@ html, body {
 #description {
   text-align: center;
   font-family: "georgia";
-  font-size: 1em;
+  font-size: 88%;
   color: #035E7B;
   width: 100%;
-  margin: 0 5%;
+  max-height: 1em;
+  margin: 2% 5%;
   clear: both; }
 
 #popularity {
