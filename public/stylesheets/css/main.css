@@ -6,9 +6,9 @@ html, body {
 .navbar {
   background: #816C61; }
   .navbar .navbar-brand {
-    color: #767B91;
+    color: #FF686B;
     font-family: "didot";
-    font-size: 1.75em;
+    font-size: 3em;
     text-shadow: .5px .5px .5px #ffffff;
     position: relative;
     z-index: 1000; }
@@ -17,9 +17,9 @@ html, body {
       color: #5EFC8D; }
 
 .glyphicon.glyphicon-off {
-  padding-top: 1%;
-  padding-right: 1%;
   float: right;
+  margin-right: 2%;
+  margin-top: .5%;
   color: #ffffff;
   font-size: 2em;
   position: relative; }
@@ -32,13 +32,14 @@ html, body {
   position: absolute; }
 
 .categoryLink, .priceLink, .brandLink, .typeLink {
-  font-family: 'arial';
-  font-size: 15px;
+  font-family: "didot";
+  font-size: 1.5em;
   margin: 5%;
-  color: #767B91; }
+  color: #FF686B;
+  text-shadow: .5px .5px .5px #ffffff; }
   .categoryLink:hover, .priceLink:hover, .brandLink:hover, .typeLink:hover {
     transition: 0.5s ease;
-    border-bottom: 2px solid #767B91;
+    border-bottom: 2px solid #FF686B;
     padding-bottom: .5%;
     color: #5EFC8D;
     text-decoration: none; }
@@ -48,8 +49,32 @@ html, body {
 
 #search-box {
   float: right;
-  width: 25%;
-  margin: .5% 5%; }
+  background: #816C61;
+  width: 30%;
+  height: 5%;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: white;
+  font-family: "georgia";
+  font-size: 1.5em;
+  cursor: zoom-in; }
+  #search-box::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 1.5em; }
+  #search-box::-moz-placeholder {
+    /* Firefox 18- */
+    color: #ffffff;
+    font-size: 1.5em; }
+  #search-box::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ffffff;
+    font-size: 1.5em; }
+  #search-box::-ms-input-placeholder {
+    color: #ffffff;
+    font-size: 1.5em; }
+  #search-box:focus {
+    outline: #FF686B; }
 
 #hits-container {
   display: flex;
@@ -57,56 +82,68 @@ html, body {
   flex-wrap: wrap;
   width: 100%; }
 
+.page {
+  margin: auto;
+  font-size: 5em;
+  background: #816C61; }
+
+.num {
+  background: #F7F3E3;
+  color: #FF686B; }
+
 .productItem {
   float: left;
-  width: 45%;
+  width: 30%;
   margin: 1%;
   padding-right: 3%;
   padding-bottom: 3%;
-  background: #ccccbd;
+  background: white;
   border-radius: 5px;
   box-shadow: 5px 5px 5px #888868; }
 
 #prodPic {
   float: left;
-  height: 14em;
-  width: 14em;
-  border-radius: 5px; }
-  #prodPic:hover {
-    box-shadow: 5px 5px 5px #000000; }
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+  margin: 2%; }
 
 #title {
-  float: right;
+  float: left;
   font-family: "didot";
-  font-size: 1.75em;
-  color: #767B91;
-  width: 60%;
-  margin: 0 .025%; }
+  font-size: 1.5em;
+  color: #FF686B;
+  text-align: center;
+  width: 100%;
+  margin: 2% 5%; }
 
 #description {
-  float: right;
+  float: left;
+  text-align: center;
   font-family: "georgia";
   font-size: 1em;
   color: #035E7B;
-  width: 60%;
-  margin: .25% .025%; }
+  width: 100%;
+  margin: 0 5%; }
 
 #price {
   float: right;
   font-family: "didot";
-  font-size: 3em;
-  color: #767B91;
-  clear: both; }
+  font-size: 2em;
+  color: #5CB85C; }
 
 #popularity {
   float: left;
-  color: #767B91;
-  clear: both; }
+  color: #FF686B;
+  font-size: 1.5em; }
 
 #categoryMenu, #priceMenu, #brandsMenu, #typesMenu {
   margin: 4%;
-  background: #ffffff;
-  width: 100%;
+  background: rgba(247, 243, 227, 0.9);
+  border-radius: 5px;
+  border: solid #816C61;
+  color: #816C61;
+  width: 25%;
   position: absolute; }
 
 .categoryList, .brandsList, .typesList {
@@ -114,3 +151,7 @@ html, body {
 
 #priceMenu {
   width: 50%; }
+
+.btn.btn-success {
+  margin-top: 25%;
+  margin-left: 5%; }
