@@ -26,31 +26,20 @@ html, body{
 
 .navbar{
 	background: $secondary-base;
-
-	.navbar-brand {
-		color: $text-base;
-		font-family: $heading-font;
-		font-size: 3em;
-		text-shadow: .5px .5px .5px #ffffff; 
-		position: relative;
-		z-index: 1000;
-
-		&:hover, &:active{		
-			text:{
-				decoration: none;
-			};
-			color: $hover-base;
-		};
-	}
 }
 
 .glyphicon.glyphicon-off{
-	float: right;
-	margin-right: 2%;
-	margin-top: .5%;
-	color:#ffffff;
-	font-size: 2em;
-	position: relative;
+	float: left;
+	color: $text-base;
+	font-size: 3em;
+	text-shadow: .5px .5px .5px #ffffff; 
+
+	&:hover, &:active{		
+		text:{
+			decoration: none;
+		};
+		color: $hover-base;
+	};
 }
 
 .navbarlinks{
@@ -64,7 +53,7 @@ html, body{
 .categoryLink, .priceLink, .brandLink, .typeLink{
 	font-family: $heading-font;
 	font-size: 1.5em;
-	margin: 5%;
+	margin: 0 5%;
 	color: $text-base;
 	text-shadow: .5px .5px .5px #ffffff; 
 	&:hover{
@@ -86,34 +75,30 @@ html, body{
 	float:right;
 	background: $secondary-base;
 	width: 30%;
-	height: 5%;
 	border-radius: 5px;
-	margin-left: 5%;
-	margin-right: 5%;
 	color: white;
-	font-family: $paragraph-font;
+	font-family: $heading-font;
 	font-size: 1.5em;
-	cursor: zoom-in;
 
 	&::-webkit-input-placeholder {
-	   color: #ffffff;
-	   font-size: 1.5em;
+	   color: rgba(#ffffff, .4);
+	   font-size: 1em;
 
 	}
 
 	&::-moz-placeholder { /* Firefox 18- */
-	   color: #ffffff;
-	    font-size: 1.5em;
+	    color: rgba(#ffffff, .4);
+	    font-size: 1em;
 	}
 
 	&::-moz-placeholder {  /* Firefox 19+ */
-	   color: #ffffff;
-	    font-size: 1.5em;
+	    color: rgba(#ffffff, .4);
+	    font-size: 1em;
 	}
 
 	&::-ms-input-placeholder {  
-	   color: #ffffff;
-	    font-size: 1.5em;
+	    color: rgba(#ffffff, .4);
+	    font-size: 1em;
 	}
 	&:focus{
 	    outline: #FF686B;

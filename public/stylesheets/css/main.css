@@ -5,24 +5,15 @@ html, body {
 
 .navbar {
   background: #816C61; }
-  .navbar .navbar-brand {
-    color: #FF686B;
-    font-family: "didot";
-    font-size: 3em;
-    text-shadow: .5px .5px .5px #ffffff;
-    position: relative;
-    z-index: 1000; }
-    .navbar .navbar-brand:hover, .navbar .navbar-brand:active {
-      text-decoration: none;
-      color: #5EFC8D; }
 
 .glyphicon.glyphicon-off {
-  float: right;
-  margin-right: 2%;
-  margin-top: .5%;
-  color: #ffffff;
-  font-size: 2em;
-  position: relative; }
+  float: left;
+  color: #FF686B;
+  font-size: 3em;
+  text-shadow: .5px .5px .5px #ffffff; }
+  .glyphicon.glyphicon-off:hover, .glyphicon.glyphicon-off:active {
+    text-decoration: none;
+    color: #5EFC8D; }
 
 .navbarlinks {
   margin: auto;
@@ -34,7 +25,7 @@ html, body {
 .categoryLink, .priceLink, .brandLink, .typeLink {
   font-family: "didot";
   font-size: 1.5em;
-  margin: 5%;
+  margin: 0 5%;
   color: #FF686B;
   text-shadow: .5px .5px .5px #ffffff; }
   .categoryLink:hover, .priceLink:hover, .brandLink:hover, .typeLink:hover {
@@ -51,28 +42,24 @@ html, body {
   float: right;
   background: #816C61;
   width: 30%;
-  height: 5%;
   border-radius: 5px;
-  margin-left: 5%;
-  margin-right: 5%;
   color: white;
-  font-family: "georgia";
-  font-size: 1.5em;
-  cursor: zoom-in; }
+  font-family: "didot";
+  font-size: 1.5em; }
   #search-box::-webkit-input-placeholder {
-    color: #ffffff;
-    font-size: 1.5em; }
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1em; }
   #search-box::-moz-placeholder {
     /* Firefox 18- */
-    color: #ffffff;
-    font-size: 1.5em; }
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1em; }
   #search-box::-moz-placeholder {
     /* Firefox 19+ */
-    color: #ffffff;
-    font-size: 1.5em; }
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1em; }
   #search-box::-ms-input-placeholder {
-    color: #ffffff;
-    font-size: 1.5em; }
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1em; }
   #search-box:focus {
     outline: #FF686B; }
 
