@@ -75,10 +75,10 @@ $(function() {
 	    attributeName: 'price',
 	    tooltips: {
 	      format: function(formattedValue) {
-	        return '$' + Math.floor(formattedValue);
+	        return '$' + formattedValue;
 	      },
-	      min:-1,
-	      max: 5000,
+	      min:0,
+	      max: 5000
 	    }
 	  })
 	);
