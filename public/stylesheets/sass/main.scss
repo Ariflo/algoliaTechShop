@@ -5,6 +5,7 @@ $hover-base: #5EFC8D;
 $heading-font: 'didot';
 $paragraph-font: 'georgia';
 $paragraph-base: #035E7B;
+$button-width: 10em;
 
 @mixin holographic {
 	background:  -moz-linear-gradient(left top,  rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* FF3.6+ */
@@ -16,6 +17,7 @@ $paragraph-base: #035E7B;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(224, 224, 209, .2)', endColorstr='rgba(235, 235, 224, .8)',GradientType=0 ); /* IE6-9 */
 
 }
+
 
 html, body{
 	background: $main-base;
@@ -49,11 +51,10 @@ html, body{
 }
 
 .categoryLink, .priceLink, .brandLink, .typeLink{
-	font-family: $heading-font;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1.5em;
-	margin: 0 5%;
-	color: $text-base;
-	text-shadow: .5px .5px .5px #ffffff; 
+	margin: 0 3%;
+	color: #ffffff;
 	&:hover{
 		 transition: 0.5s ease;
 		 border-bottom: 2px solid $text-base;
@@ -128,7 +129,7 @@ html, body{
 #prodPic{
 	float:left;
 	max-width:10em;
-           max-height:10em;
+	max-height:10em;
 	height: auto;
 	width: auto;
 	border-radius: 5px;	
@@ -211,11 +212,12 @@ html, body{
 
 .btn.btn-success{
 	float: right;
-	width: 10em;
+	width: $button-width;
 }
 
 .row{	
 	height: 10%;
+	width: 100%;
 	max-height: 4em;
 	margin: 0 4%;
 }
