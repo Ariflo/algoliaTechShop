@@ -125,7 +125,8 @@ html, body {
   color: #5CB85C; }
 
 #categoryMenu, #priceMenu, #brandsMenu, #typesMenu {
-  margin: 4%;
+  margin-top: 4%;
+  margin-left: 10%;
   background: rgba(247, 243, 227, 0.9);
   border-radius: 5px;
   border: solid #816C61;
@@ -138,6 +139,12 @@ html, body {
 
 #priceMenu {
   width: 50%; }
+
+#brandsMenu {
+  margin-left: 37%; }
+
+#typesMenu {
+  margin-left: 50%; }
 
 .btn.btn-success {
   float: right;

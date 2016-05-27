@@ -79,7 +79,12 @@ $(function() {
 	    container: '#brandsMenu',
 	    attributeName: 'brand',
 	    operator: 'or',
-	    limit: 10
+	    limit: 10,
+	    templates:{
+	    	item: function(data){
+	    		return '<ul><li class="brandsList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span><a>'+data.count+'</a></span></li></ul>'
+	    	}
+	        }
 	  })
 	);	
 
@@ -88,7 +93,12 @@ $(function() {
 	    container: '#typesMenu',
 	    attributeName: 'type',
 	    operator: 'or',
-	    limit: 10
+	    limit: 10,
+	    templates:{
+	    	item: function(data){
+	    		return '<ul><li class="typesList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span><a>'+data.count+'</a></span></li></ul>'
+	    	}
+	        }
 	  })
 	);
 

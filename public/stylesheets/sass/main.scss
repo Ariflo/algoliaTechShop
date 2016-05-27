@@ -183,7 +183,8 @@ html, body{
 
 
 #categoryMenu{
-	margin: 4%;
+	margin-top: 4%;
+	margin-left: 10%;
 	background: rgba($main-base, .9);
 	border-radius: 5px;
 	border: solid $secondary-base;
@@ -203,6 +204,7 @@ html, body{
 
 #brandsMenu{
 	@extend #categoryMenu;
+	margin-left: 37%;
 } 
 
 .brandsList{
@@ -211,6 +213,7 @@ html, body{
 
 #typesMenu{
 	@extend #categoryMenu;
+	margin-left: 50%;
 }
 
 .typesList{
