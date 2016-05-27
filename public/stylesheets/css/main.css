@@ -82,6 +82,9 @@ html, body {
 .productItem {
   float: left;
   width: 30%;
+  height: auto;
+  min-height: 35em;
+  max-height: 35em;
   margin: 1%;
   padding-right: 3%;
   padding-bottom: 3%;
