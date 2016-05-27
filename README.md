@@ -30,15 +30,15 @@ Wire Frame Layouts
 -
 **Homepage**
 
-![wireframe](public/images/homepage.jpg)
+![wireframe](public/assets/images/homepage.jpg)
 
 **Item Modal**
 
-![wireframe](public/images/modal.jpg)
+![wireframe](public/assets/images/modal.jpg)
 
 **Menu**
     
-![wireframe](public/images/menu.jpg)
+![wireframe](public/assets/images/menu.jpg)
 
 
  
