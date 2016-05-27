@@ -114,11 +114,11 @@ html, body {
 #description {
   text-align: center;
   font-family: "georgia";
-  font-size: 1em;
+  font-size: 88%;
   color: #035E7B;
   width: 100%;
-  max-height: 5em;
-  margin: 0 5%;
+  max-height: 1em;
+  margin: 2% 5%;
   clear: both; }
 
 #popularity {
