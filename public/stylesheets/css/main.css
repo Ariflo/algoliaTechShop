@@ -69,15 +69,6 @@ html, body {
   flex-wrap: wrap;
   width: 100%; }
 
-.page {
-  margin: auto;
-  font-size: 5em;
-  background: #816C61; }
-
-.num {
-  background: #F7F3E3;
-  color: #FF686B; }
-
 .productItem {
   float: left;
   width: 30%;
@@ -125,20 +116,23 @@ html, body {
   color: #5CB85C; }
 
 #categoryMenu, #priceMenu, #brandsMenu, #typesMenu {
-  margin-top: 4%;
+  margin-top: 4em;
   margin-left: 10%;
   background: rgba(247, 243, 227, 0.9);
   border-radius: 5px;
   border: solid #816C61;
   color: #816C61;
   width: 25%;
+  max-width: 25em;
   position: absolute; }
 
 .categoryList, .brandsList, .typesList {
   list-style: none; }
 
 #priceMenu {
-  width: 50%; }
+  margin-left: 20%;
+  width: 35%;
+  max-width: 25em; }
 
 #brandsMenu {
   margin-left: 37%; }
@@ -154,3 +148,26 @@ html, body {
   height: 10%;
   max-height: 4em;
   margin: 0 4%; }
+
+#pagination-container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  clear: both; }
+
+.page {
+  font-size: 2em;
+  background: #816C61; }
+
+.num {
+  background: #F7F3E3;
+  color: #FF686B;
+  width: 20em; }
+
+#notFound {
+  margin-left: 50%;
+  margin-right: 50%; }
+
+#notFoundHeader {
+  font-family: "didot";
+  color: #FF686B; }

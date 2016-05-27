@@ -1,6 +1,9 @@
+
+
 // add scripts
 $(function() {
 
+	//set focus on search on page load
 	$("#search-box").focus();
 
 	// algolia instantsearch widgets
@@ -23,6 +26,7 @@ $(function() {
 	    cssClasses:{
 	    	item: "productItem"
 	    		},
+	    hitsPerPage: 50,
 	    templates: {
 	      item: function(data){
 	      	if(data.popularity >= 0 && data.popularity < 1000){
@@ -40,11 +44,14 @@ $(function() {
 	     	}else{
 	      		data.popularity = '☆☆☆☆☆';
 			return '<img id="prodPic" src="'+ data.image +'" alt="bestbuy item"><div class="row"><span id="popularity"><h4>'+data.popularity+' 5/5</h4></div></span><div class="row"><p id="price">$'+data.price+'</p></div><div class="row"><a href="'+data.url+'"><button class="btn  btn-success btn-lg">Buy</button></a></div><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p>';
-	     	}			
-	       }
+	     	}
+
+	       },
+	       empty: '<div id="notFoundContainer"><h1 id="notFoundHeader">Sorry Snoopy cannot find what you seek...</h1><img id="notFound" src="../assets/images/notFound.gif"></div>'	
 	    }
 	  })
 	);
+
 
 
 
@@ -69,7 +76,9 @@ $(function() {
 	    tooltips: {
 	      format: function(formattedValue) {
 	        return '$' + formattedValue;
-	      }
+	      },
+	      min:0,
+	      max: 5000
 	    }
 	  })
 	);
@@ -102,6 +111,20 @@ $(function() {
 	  })
 	);
 
+	search.addWidget(
+	  instantsearch.widgets.pagination({
+	    container: '#pagination-container',
+	     scrollTo: '#search-box',
+	     cssClasses: {
+	     	root:"page",
+	     	link:"num"
+	     }
+	  })
+	);
+
+	search.start();
+
+	//Navbar animations
 	$('.categoryLink').on("click", function () {
 		$('#categoryMenu').css("display", "block");
 	});	
@@ -153,17 +176,4 @@ $(function() {
 	$('#typesMenu').on('mouseout', function(){
 		$('#typesMenu').css("display", "none");
 	})
-
-	search.addWidget(
-	  instantsearch.widgets.pagination({
-	    container: '#pagination-container',
-	     scrollTo: '#search-box',
-	     cssClasses: {
-	     	root:"page",
-	     	link:"num"
-	     }
-	  })
-	);
-
-	search.start();
 }); 
