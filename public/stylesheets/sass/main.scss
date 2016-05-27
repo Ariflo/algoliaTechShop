@@ -1,5 +1,5 @@
 $main-base: #F7F3E3;
-$secondary-base: #816C61;
+$secondary-base: #003B64;
 $text-base: #FF686B;
 $hover-base: #5EFC8D;
 $heading-font: 'didot';
@@ -30,7 +30,7 @@ html, body{
 
 .glyphicon.glyphicon-off{
 	float: left;
-	color: $text-base;
+	color: $hover-base;
 	font-size: 3em;
 	text-shadow: .5px .5px .5px #ffffff; 
 
@@ -38,7 +38,7 @@ html, body{
 		text:{
 			decoration: none;
 		};
-		color: $hover-base;
+		color: $text-base;
 	};
 }
 
@@ -59,7 +59,7 @@ html, body{
 		 transition: 0.5s ease;
 		 border-bottom: 2px solid $text-base;
 		 padding-bottom: .5%;
-		 color: $hover-base;
+		 color: white;
 		text:{
 			decoration: none;
 		};
@@ -70,37 +70,52 @@ html, body{
 	display:none;
 }
 
-#search-box{
-	float:right;
-	background: $secondary-base;
-	width: 30%;
-	border-radius: 5px;
-	color: white;
-	font-family: $heading-font;
-	font-size: 1.5em;
-
-	&::-webkit-input-placeholder {
-	   color: rgba(#ffffff, .4);
-	   font-size: 1em;
-
+#searchBar{
+	position: relative;
+	.glyphicon.glyphicon-search{
+		background: #ffffff;
+		color: rgba(#000000, .4);
+		border-radius: 5px;
+		font-size: 1.75em;
+		float: right;
+		position: absolute;
+		margin-left: 93%;
+		top: 10px;
 	}
+	#search-box{
+		float:right;
+		width: 30%;
+		margin-top: 4px;
+		border-radius: 5px;
+		color: $paragraph-base;
+		font-family: $heading-font;
+		font-size: 1.5em;
+		border-right: none;
 
-	&::-moz-placeholder { /* Firefox 18- */
-	    color: rgba(#ffffff, .4);
-	    font-size: 1em;
-	}
 
-	&::-moz-placeholder {  /* Firefox 19+ */
-	    color: rgba(#ffffff, .4);
-	    font-size: 1em;
-	}
+		&::-webkit-input-placeholder {
+		   color: rgba(#000000, .4);
+		   font-size: 1em;
 
-	&::-ms-input-placeholder {  
-	    color: rgba(#ffffff, .4);
-	    font-size: 1em;
-	}
-	&:focus{
-	    outline: #FF686B;
+		}
+
+		&::-moz-placeholder { /* Firefox 18- */
+		    color: rgba(#000000, .4);
+		    font-size: 1em;
+		}
+
+		&::-moz-placeholder {  /* Firefox 19+ */
+		    color: rgba(#000000, .4);
+		    font-size: 1em;
+		}
+
+		&::-ms-input-placeholder {  
+		    color: rgba(#000000, .4);
+		    font-size: 1em;
+		}
+		&:focus{
+		    outline: #FF686B;
+		}
 	}
 }
 
@@ -133,6 +148,8 @@ html, body{
 	height: auto;
 	width: auto;
 	border-radius: 5px;	
+	margin-left: 2em;
+	margin-top: 2em;
 }
 
 #title{

@@ -3,16 +3,16 @@ html, body {
   max-width: 100%; }
 
 .navbar {
-  background: #816C61; }
+  background: #003B64; }
 
 .glyphicon.glyphicon-off {
   float: left;
-  color: #FF686B;
+  color: #5EFC8D;
   font-size: 3em;
   text-shadow: .5px .5px .5px #ffffff; }
   .glyphicon.glyphicon-off:hover, .glyphicon.glyphicon-off:active {
     text-decoration: none;
-    color: #5EFC8D; }
+    color: #FF686B; }
 
 .navbarlinks {
   margin: auto;
@@ -30,36 +30,48 @@ html, body {
     transition: 0.5s ease;
     border-bottom: 2px solid #FF686B;
     padding-bottom: .5%;
-    color: #5EFC8D;
+    color: white;
     text-decoration: none; }
 
 #categoryMenu, #priceMenu, #brandsMenu, #typesMenu, #priceMenu, #brandsMenu, #typesMenu {
   display: none; }
 
-#search-box {
-  float: right;
-  background: #816C61;
-  width: 30%;
-  border-radius: 5px;
-  color: white;
-  font-family: "didot";
-  font-size: 1.5em; }
-  #search-box::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 1em; }
-  #search-box::-moz-placeholder {
-    /* Firefox 18- */
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 1em; }
-  #search-box::-moz-placeholder {
-    /* Firefox 19+ */
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 1em; }
-  #search-box::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 1em; }
-  #search-box:focus {
-    outline: #FF686B; }
+#searchBar {
+  position: relative; }
+  #searchBar .glyphicon.glyphicon-search {
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    font-size: 1.75em;
+    float: right;
+    position: absolute;
+    margin-left: 93%;
+    top: 10px; }
+  #searchBar #search-box {
+    float: right;
+    width: 30%;
+    margin-top: 4px;
+    border-radius: 5px;
+    color: #035E7B;
+    font-family: "didot";
+    font-size: 1.5em;
+    border-right: none; }
+    #searchBar #search-box::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 1em; }
+    #searchBar #search-box::-moz-placeholder {
+      /* Firefox 18- */
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 1em; }
+    #searchBar #search-box::-moz-placeholder {
+      /* Firefox 19+ */
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 1em; }
+    #searchBar #search-box::-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 1em; }
+    #searchBar #search-box:focus {
+      outline: #FF686B; }
 
 #hits-container {
   display: flex;
@@ -83,7 +95,9 @@ html, body {
   max-height: 10em;
   height: auto;
   width: auto;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-left: 2em;
+  margin-top: 2em; }
 
 #title {
   float: left;
@@ -118,8 +132,8 @@ html, body {
   margin-left: 10%;
   background: rgba(247, 243, 227, 0.9);
   border-radius: 5px;
-  border: solid #816C61;
-  color: #816C61;
+  border: solid #003B64;
+  color: #003B64;
   width: 25%;
   max-width: 25em;
   position: absolute; }
@@ -156,7 +170,7 @@ html, body {
 
 .page {
   font-size: 2em;
-  background: #816C61; }
+  background: #003B64; }
 
 .num {
   background: #F7F3E3;
