@@ -153,45 +153,47 @@ html, body{
 	box-shadow: 5px 5px 5px darken(#A0A083, 10%);
 }
 
+
 #prodPic{
 	float:left;
+	max-width:10em;
+           max-height:10em;
 	height: auto;
 	width: auto;
 	border-radius: 5px;	
-	margin: 2%;
 }
 
 #title{
-	float:left;
+	float: left;
 	font-family: $heading-font;
 	font-size: 1.5em;
 	color: $text-base;
 	text-align: center;
 	width: 100%;
-	margin: 2% 5%;
+	margin: 5%;
 }
 
 #description{
-	float: left;
 	text-align: center;
 	font-family: $paragraph-font;
 	font-size: 1em;
 	color: $paragraph-base;
 	width: 100%;
 	margin: 0 5%;
-}
-
-#price{
-	float:right;
-	font-family: $heading-font;
-	font-size: 2em;
-	color: #5CB85C;
+	clear: both;
 }
 
 #popularity{
-	float:left;
+	float:right;
 	color: $text-base;
-	font-size:1.5em;
+}
+
+
+#price{
+	font-family: $heading-font;
+	float: right;
+	font-size: 200%;
+	color: #5CB85C;
 }
 
 
@@ -231,6 +233,12 @@ html, body{
 }
 
 .btn.btn-success{
-     margin-top: 25%;
-     margin-left: 5%;
+	float: right;
+	width: 10em;
+}
+
+.row{	
+	height: 10%;
+	max-height: 4em;
+	margin: 0 4%;
 }

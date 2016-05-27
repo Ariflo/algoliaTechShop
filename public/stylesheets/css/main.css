@@ -103,10 +103,11 @@ html, body {
 
 #prodPic {
   float: left;
+  max-width: 10em;
+  max-height: 10em;
   height: auto;
   width: auto;
-  border-radius: 5px;
-  margin: 2%; }
+  border-radius: 5px; }
 
 #title {
   float: left;
@@ -115,27 +116,26 @@ html, body {
   color: #FF686B;
   text-align: center;
   width: 100%;
-  margin: 2% 5%; }
+  margin: 5%; }
 
 #description {
-  float: left;
   text-align: center;
   font-family: "georgia";
   font-size: 1em;
   color: #035E7B;
   width: 100%;
-  margin: 0 5%; }
-
-#price {
-  float: right;
-  font-family: "didot";
-  font-size: 2em;
-  color: #5CB85C; }
+  margin: 0 5%;
+  clear: both; }
 
 #popularity {
-  float: left;
-  color: #FF686B;
-  font-size: 1.5em; }
+  float: right;
+  color: #FF686B; }
+
+#price {
+  font-family: "didot";
+  float: right;
+  font-size: 200%;
+  color: #5CB85C; }
 
 #categoryMenu, #priceMenu, #brandsMenu, #typesMenu {
   margin: 4%;
@@ -153,5 +153,10 @@ html, body {
   width: 50%; }
 
 .btn.btn-success {
-  margin-top: 25%;
-  margin-left: 5%; }
+  float: right;
+  width: 10em; }
+
+.row {
+  height: 10%;
+  max-height: 4em;
+  margin: 0 4%; }
