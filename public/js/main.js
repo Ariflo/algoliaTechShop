@@ -13,6 +13,7 @@ $(function() {
 	       indexName: 'tech_shop_data'
 	});
 
+	//searchbar
 	search.addWidget(
              instantsearch.widgets.searchBox({
                container: '#search-box',
@@ -20,6 +21,7 @@ $(function() {
              })
             );
 
+	//product tiles 
 	search.addWidget(
 	  instantsearch.widgets.hits({
 	    container: '#hits-container',
@@ -53,8 +55,7 @@ $(function() {
 	);
 
 
-
-
+	//categories menu
 	search.addWidget(
 	  instantsearch.widgets.refinementList({
 	    container: '#categoryMenu',
@@ -70,7 +71,7 @@ $(function() {
 	  })
 	  );
 
-
+	//price range bar
 	search.addWidget(
 	  instantsearch.widgets.rangeSlider({
 	    container: '#priceMenu',
@@ -85,6 +86,7 @@ $(function() {
 	  })
 	);
 
+	//brands menu
 	search.addWidget(
 	  instantsearch.widgets.refinementList({
 	    container: '#brandsMenu',
@@ -100,6 +102,7 @@ $(function() {
 	  })
 	);	
 
+	//types menu
 	search.addWidget(
 	  instantsearch.widgets.refinementList({
 	    container: '#typesMenu',
@@ -115,6 +118,7 @@ $(function() {
 	  })
 	);
 
+	//pagination footer
 	search.addWidget(
 	  instantsearch.widgets.pagination({
 	    container: '#pagination-container',
@@ -126,9 +130,12 @@ $(function() {
 	  })
 	);
 
+	//call to start searc on page load
 	search.start();
 
 	//Navbar animations
+
+	//category menu animations
 	$('.categoryLink').on("click", function () {
 		$('#categoryMenu').css("display", "block");
 	});	
@@ -142,6 +149,7 @@ $(function() {
 	});	
 
 
+	//price menu animations
 	$('.priceLink').on("click", function () {
 		$('#priceMenu').css("display", "block");
 	});	
@@ -155,7 +163,7 @@ $(function() {
 	});	
 
 
-
+	//brand menu animations
 	$('.brandLink').on("click", function () {
 		$('#brandsMenu').css("display", "block");
 	});	
@@ -168,7 +176,7 @@ $(function() {
 		$('#brandsMenu').css("display", "none");
 	});
 
-
+	//types menu animations
 	$('.typeLink').on("click", function () {
 		$('#typesMenu').css("display", "block");
 	});	
