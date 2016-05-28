@@ -56,18 +56,19 @@ $(function() {
 
 
 	search.addWidget(
-	  instantsearch.widgets.menu({
+	  instantsearch.widgets.refinementList({
 	    container: '#categoryMenu',
 	    attributeName: 'categories',
 	    operator: 'or',
 	    limit: 10,
-	   templates:{
-	   	item: function(data){
-	   		return '<ul><li class="categoryList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span class="count"><a>'+data.count+'</a></span></li></ul>';
-	   	}
-	       }
+	    cssClasses:{
+	    	list: 'categoryList',
+	    	label: 'checkbox-inline',
+	    	count:'count'
+	    }
 	  })
 	  );
+
 
 	search.addWidget(
 	  instantsearch.widgets.rangeSlider({
@@ -89,11 +90,11 @@ $(function() {
 	    attributeName: 'brand',
 	    operator: 'or',
 	    limit: 10,
-	    templates:{
-	    	item: function(data){
-	    		return '<ul><li class="brandsList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span class="count"><a>'+data.count+'</a></span></li></ul>';
-	    	}
-	        }
+	    cssClasses:{
+	    	list: 'brandsList',
+	    	label: 'checkbox-inline',
+	    	count:'count'
+	    }
 	  })
 	);	
 
@@ -103,11 +104,11 @@ $(function() {
 	    attributeName: 'type',
 	    operator: 'or',
 	    limit: 10,
-	    templates:{
-	    	item: function(data){
-	    		return '<ul><li class="typesList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span class="count"><a>'+data.count+'</a></span></li></ul>';
-	    	}
-	        }
+	    cssClasses:{
+	    	list: 'typesList',
+	    	label: 'checkbox-inline',
+	    	count:'count'
+	    }
 	  })
 	);
 
@@ -163,11 +164,6 @@ $(function() {
 	$('#brandsMenu').on('mouseout', function(){
 		$('#brandsMenu').css("display", "none");
 	});
-
-	$('.categoryList').on('click', function(e){
-		e.target.attr("checked", "checked");
-	})
-	
 
 
 	$('.typeLink').on("click", function () {

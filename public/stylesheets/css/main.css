@@ -34,7 +34,8 @@ html, body {
     text-decoration: none; }
 
 #categoryMenu, #priceMenu, #brandsMenu, #typesMenu, #priceMenu, #brandsMenu, #typesMenu {
-  display: none; }
+  display: none;
+  padding: 5px; }
 
 #searchBar {
   position: relative; }
@@ -192,12 +193,11 @@ html, body {
   color: #FF686B; }
 
 .count {
-  background: #003B64;
+  background: rgba(0, 59, 100, 0.5);
   border-radius: 5px;
-  padding: .1em .2em; }
-  .count a {
-    color: #ffffff;
-    cursor: pointer;
-    text-decoration: none; }
-    .count a:hover {
-      color: #5EFC8D; }
+  padding: .1em .2em;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none; }
+  .count:hover {
+    color: #5EFC8D; }
