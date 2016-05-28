@@ -194,7 +194,7 @@ html, body {
 .count {
   background: #003B64;
   border-radius: 5px;
-  padding: .1em .4em; }
+  padding: .1em .2em; }
   .count a {
     color: #ffffff;
     cursor: pointer;
