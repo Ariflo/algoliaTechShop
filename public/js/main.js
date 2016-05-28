@@ -63,7 +63,7 @@ $(function() {
 	    limit: 10,
 	   templates:{
 	   	item: function(data){
-	   		return '<ul><li class="categoryList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span><a>'+data.count+'</a></span></li></ul>'
+	   		return '<ul><li class="categoryList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span class="count"><a>'+data.count+'</a></span></li></ul>';
 	   	}
 	       }
 	  })
@@ -91,7 +91,7 @@ $(function() {
 	    limit: 10,
 	    templates:{
 	    	item: function(data){
-	    		return '<ul><li class="brandsList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span><a>'+data.count+'</a></span></li></ul>'
+	    		return '<ul><li class="brandsList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span class="count"><a>'+data.count+'</a></span></li></ul>';
 	    	}
 	        }
 	  })
@@ -105,7 +105,7 @@ $(function() {
 	    limit: 10,
 	    templates:{
 	    	item: function(data){
-	    		return '<ul><li class="typesList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span><a>'+data.count+'</a></span></li></ul>'
+	    		return '<ul><li class="typesList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span class="count"><a>'+data.count+'</a></span></li></ul>';
 	    	}
 	        }
 	  })
@@ -131,11 +131,11 @@ $(function() {
 
 	$('#categoryMenu').on('mouseover', function(){
 		$('#categoryMenu').css("display", "block");
-	})	
+	});	
 
 	$('#categoryMenu').on('mouseout', function(){
 		$('#categoryMenu').css("display", "none");
-	})	
+	});	
 
 
 	$('.priceLink').on("click", function () {
@@ -144,11 +144,11 @@ $(function() {
 
 	$('#priceMenu').on('mouseover', function(){
 		$('#priceMenu').css("display", "block");
-	})	
+	});	
 
 	$('#priceMenu').on('mouseout', function(){
 		$('#priceMenu').css("display", "none");
-	})	
+	});	
 
 
 
@@ -158,12 +158,17 @@ $(function() {
 
 	$('#brandsMenu').on('mouseover', function(){
 		$('#brandsMenu').css("display", "block");
-	})	
+	});	
 
 	$('#brandsMenu').on('mouseout', function(){
 		$('#brandsMenu').css("display", "none");
+	});
+
+	$('input').on('click', function(e){
+		e.target.attr("checked", "checked")
 	})
 	
+
 
 	$('.typeLink').on("click", function () {
 		$('#typesMenu').css("display", "block");
@@ -171,9 +176,9 @@ $(function() {
 
 	$('#typesMenu').on('mouseover', function(){
 		$('#typesMenu').css("display", "block");
-	})	
+	});	
 
 	$('#typesMenu').on('mouseout', function(){
 		$('#typesMenu').css("display", "none");
-	})
+	});
 }); 

@@ -190,3 +190,14 @@ html, body {
 #notFoundHeader {
   font-family: "didot";
   color: #FF686B; }
+
+.count {
+  background: #003B64;
+  border-radius: 5px;
+  padding: .1em .4em; }
+  .count a {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none; }
+    .count a:hover {
+      color: #5EFC8D; }

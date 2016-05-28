@@ -275,3 +275,19 @@ html, body{
 	font-family: $heading-font;
 	color: $text-base;
 }
+
+.count{
+	background: $secondary-base;
+	border-radius: 5px;
+	padding: .1em .4em;
+	& a{
+		color: #ffffff;
+		cursor: pointer;
+		text:{
+			decoration: none;
+		};
+		&:hover{
+			color:$hover-base;
+		};
+	}
+}
