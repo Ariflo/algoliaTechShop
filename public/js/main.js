@@ -164,8 +164,8 @@ $(function() {
 		$('#brandsMenu').css("display", "none");
 	});
 
-	$('input').on('click', function(e){
-		e.target.attr("checked", "checked")
+	$('.categoryList').on('click', function(e){
+		e.target.attr("checked", "checked");
 	})
 	
 
