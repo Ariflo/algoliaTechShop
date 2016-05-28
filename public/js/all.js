@@ -13,6 +13,7 @@ $(function() {
 	       indexName: 'tech_shop_data'
 	});
 
+	//searchbar
 	search.addWidget(
              instantsearch.widgets.searchBox({
                container: '#search-box',
@@ -20,6 +21,7 @@ $(function() {
              })
             );
 
+	//product tiles 
 	search.addWidget(
 	  instantsearch.widgets.hits({
 	    container: '#hits-container',
@@ -53,22 +55,23 @@ $(function() {
 	);
 
 
-
-
+	//categories menu
 	search.addWidget(
-	  instantsearch.widgets.menu({
+	  instantsearch.widgets.refinementList({
 	    container: '#categoryMenu',
 	    attributeName: 'categories',
 	    operator: 'or',
 	    limit: 10,
-	   templates:{
-	   	item: function(data){
-	   		return '<ul><li class="categoryList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span><a>'+data.count+'</a></span></li></ul>'
-	   	}
-	       }
+	    cssClasses:{
+	    	list: 'categoryList',
+	    	label: 'checkbox-inline',
+	    	count:'count',
+	    	item: 'lineItem'
+	    }
 	  })
 	  );
 
+	//price range bar
 	search.addWidget(
 	  instantsearch.widgets.rangeSlider({
 	    container: '#priceMenu',
@@ -83,34 +86,39 @@ $(function() {
 	  })
 	);
 
+	//brands menu
 	search.addWidget(
 	  instantsearch.widgets.refinementList({
 	    container: '#brandsMenu',
 	    attributeName: 'brand',
 	    operator: 'or',
 	    limit: 10,
-	    templates:{
-	    	item: function(data){
-	    		return '<ul><li class="brandsList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span><a>'+data.count+'</a></span></li></ul>'
-	    	}
-	        }
+	    cssClasses:{
+	    	list: 'brandsList',
+	    	label: 'checkbox-inline',
+	    	count:'count',
+	    	item: 'lineItem'
+	    }
 	  })
 	);	
 
+	//types menu
 	search.addWidget(
 	  instantsearch.widgets.refinementList({
 	    container: '#typesMenu',
 	    attributeName: 'type',
 	    operator: 'or',
 	    limit: 10,
-	    templates:{
-	    	item: function(data){
-	    		return '<ul><li class="typesList"><label class="checkbox-inline"><input type="checkbox">'+data.name+'</label>  <span><a>'+data.count+'</a></span></li></ul>'
-	    	}
-	        }
+	    cssClasses:{
+	    	list: 'typesList',
+	    	label: 'checkbox-inline',
+	    	count:'count',
+	    	item: 'lineItem'
+	    }
 	  })
 	);
 
+	//pagination footer
 	search.addWidget(
 	  instantsearch.widgets.pagination({
 	    container: '#pagination-container',
@@ -122,58 +130,62 @@ $(function() {
 	  })
 	);
 
+	//call to start searc on page load
 	search.start();
 
 	//Navbar animations
+
+	//category menu animations
 	$('.categoryLink').on("click", function () {
 		$('#categoryMenu').css("display", "block");
 	});	
 
 	$('#categoryMenu').on('mouseover', function(){
 		$('#categoryMenu').css("display", "block");
-	})	
+	});	
 
 	$('#categoryMenu').on('mouseout', function(){
 		$('#categoryMenu').css("display", "none");
-	})	
+	});	
 
 
+	//price menu animations
 	$('.priceLink').on("click", function () {
 		$('#priceMenu').css("display", "block");
 	});	
 
 	$('#priceMenu').on('mouseover', function(){
 		$('#priceMenu').css("display", "block");
-	})	
+	});	
 
 	$('#priceMenu').on('mouseout', function(){
 		$('#priceMenu').css("display", "none");
-	})	
+	});	
 
 
-
+	//brand menu animations
 	$('.brandLink').on("click", function () {
 		$('#brandsMenu').css("display", "block");
 	});	
 
 	$('#brandsMenu').on('mouseover', function(){
 		$('#brandsMenu').css("display", "block");
-	})	
+	});	
 
 	$('#brandsMenu').on('mouseout', function(){
 		$('#brandsMenu').css("display", "none");
-	})
-	
+	});
 
+	//types menu animations
 	$('.typeLink').on("click", function () {
 		$('#typesMenu').css("display", "block");
 	});	
 
 	$('#typesMenu').on('mouseover', function(){
 		$('#typesMenu').css("display", "block");
-	})	
+	});	
 
 	$('#typesMenu').on('mouseout', function(){
 		$('#typesMenu').css("display", "none");
-	})
+	});
 }); 

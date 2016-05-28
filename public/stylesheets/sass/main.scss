@@ -68,6 +68,7 @@ html, body{
 
 #categoryMenu, #priceMenu, #brandsMenu, #typesMenu{
 	display:none;
+	padding: 5px;
 }
 
 #searchBar{
@@ -204,6 +205,11 @@ html, body{
 
 .categoryList{
 	list-style: none;
+	
+}
+
+.lineItem{
+	margin: 4%;
 }
 
 #priceMenu{
@@ -274,4 +280,19 @@ html, body{
 #notFoundHeader{
 	font-family: $heading-font;
 	color: $text-base;
+}
+
+.count{
+	background: rgba($secondary-base, .5);
+	border-radius: 5px;
+	padding: .1em .2em;
+	color: #ffffff;
+	cursor: pointer;
+	text:{
+		decoration: none;
+	};
+	&:hover{
+		color:$hover-base;
+	};
+	
 }
