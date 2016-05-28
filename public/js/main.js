@@ -64,7 +64,8 @@ $(function() {
 	    cssClasses:{
 	    	list: 'categoryList',
 	    	label: 'checkbox-inline',
-	    	count:'count'
+	    	count:'count',
+	    	item: 'lineItem'
 	    }
 	  })
 	  );
@@ -93,7 +94,8 @@ $(function() {
 	    cssClasses:{
 	    	list: 'brandsList',
 	    	label: 'checkbox-inline',
-	    	count:'count'
+	    	count:'count',
+	    	item: 'lineItem'
 	    }
 	  })
 	);	
@@ -107,7 +109,8 @@ $(function() {
 	    cssClasses:{
 	    	list: 'typesList',
 	    	label: 'checkbox-inline',
-	    	count:'count'
+	    	count:'count',
+	    	item: 'lineItem'
 	    }
 	  })
 	);
