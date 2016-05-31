@@ -5,7 +5,7 @@ $hover-base: #5EFC8D;
 $heading-font: 'didot';
 $paragraph-font: 'georgia';
 $paragraph-base: #035E7B;
-$button-width: 10em;
+$button-width: 45%;
 
 @mixin holographic {
 	background:  -moz-linear-gradient(left top,  rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* FF3.6+ */
@@ -122,7 +122,7 @@ html, body{
 
 
 #interface{
-	margin: 0 5%;
+	margin: 0 1%;
 }
 
 #hits-container{
@@ -173,7 +173,7 @@ html, body{
 #description{
 	text-align: center;
 	font-family: $paragraph-font;
-	font-size: 88%;
+	font-size: 85%;
 	color: $paragraph-base;
 	width: 100%;
 	max-height: 1em;
