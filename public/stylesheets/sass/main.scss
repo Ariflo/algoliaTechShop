@@ -121,13 +121,19 @@ html, body{
 }
 
 
-
+#interface{
+	margin: 0 5%;
+}
 
 #hits-container{
 	display:flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	width: 100%;
+	padding-left: 4%;
+	padding-right: 1%;
+	border-top: 2px solid #000;
+
 }
 
 .productItem{
@@ -271,7 +277,6 @@ html, body{
 
 }
 
-
 #notFound{
 	margin-left: 50%;
 	margin-right: 50%;
@@ -293,6 +298,47 @@ html, body{
 	};
 	&:hover{
 		color:$hover-base;
-	};
-	
+	};	
 }
+
+#relavanceheader{
+	width: 100%;
+	padding: 0 5%;
+	font-family: $heading-font;
+	font-size: 1.5em;
+	color: $text-base;
+}
+
+.ais-stats--time{
+	font-size: .75em;
+	color: lighten($text-base, 10%);	
+}
+
+#stats{
+	float: left
+
+}
+
+#sort-by{
+	float: right;
+}
+
+.dropdown{
+	font-size: .85em;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+
+.glyphicon.glyphicon-triangle-bottom {
+	float:right;
+	padding-left:1%;
+	padding-top: .5%;
+	font-size: .5em;
+	cursor: pointer;
+}
+
