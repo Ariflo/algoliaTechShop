@@ -32,20 +32,20 @@ $(function() {
 	    templates: {
 	      item: function(data){
 	      	if(data.popularity >= 0 && data.popularity < 1000){
-	      		data.popularity = '☆☆';
-			return '<img id="prodPic" src="'+ data.image +'" alt="bestbuy item"><div class="row"><span id="popularity"><h4>'+data.popularity+' 2/5</h4></span></div><div class="row"><p id="price">$'+data.price+'</p></div><div class="row"><a href="'+data.url+'"><button class="btn btn-success btn-lg">Buy</button></a></div><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p>';
+	      		data.popularity = '★★☆☆☆';
+			return '<img id="prodPic" src="'+ data.image +'" alt="bestbuy item"><div class="row"><span id="popularity"><h4>'+data.popularity+' </h4></span></div><div class="row"><p id="price">$'+data.price+'</p></div><div class="row"><a href="'+data.url+'"><button class="btn btn-success btn-lg">Buy</button></a></div><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p>';
 
 		}else if(data.popularity >= 1000 && data.popularity < 5000 ){
-	      		data.popularity = '☆☆☆';
-			return '<img id="prodPic" src="'+ data.image +'" alt="bestbuy item"><div class="row"><span id="popularity"><h4>'+data.popularity+' 3/5</h4></div></span><div class="row"><p id="price">$'+data.price+'</p></div><div class="row"><a href="'+data.url+'"><button class="btn btn-success btn-lg">Buy</button></a></div><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p>';
+	      		data.popularity = '★★★☆☆';
+			return '<img id="prodPic" src="'+ data.image +'" alt="bestbuy item"><div class="row"><span id="popularity"><h4>'+data.popularity+' </h4></div></span><div class="row"><p id="price">$'+data.price+'</p></div><div class="row"><a href="'+data.url+'"><button class="btn btn-success btn-lg">Buy</button></a></div><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p>';
 
 	     	}else if(data.popularity >= 5000 && data.popularity < 8000 ){
-	      		data.popularity = '☆☆☆☆';
-			return '<img id="prodPic" src="'+ data.image +'" alt="bestbuy item"><div class="row"><span id="popularity"><h4>'+data.popularity+' 4/5</h4></div></span><div class="row"><p id="price">$'+data.price+'</p></div><div class="row"><a href="'+data.url+'"><button class="btn btn-success btn-lg">Buy</button></a></div><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p>';
+	      		data.popularity = '★★★★☆';
+			return '<img id="prodPic" src="'+ data.image +'" alt="bestbuy item"><div class="row"><span id="popularity"><h4>'+data.popularity+' </h4></div></span><div class="row"><p id="price">$'+data.price+'</p></div><div class="row"><a href="'+data.url+'"><button class="btn btn-success btn-lg">Buy</button></a></div><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p>';
 
 	     	}else{
-	      		data.popularity = '☆☆☆☆☆';
-			return '<img id="prodPic" src="'+ data.image +'" alt="bestbuy item"><div class="row"><span id="popularity"><h4>'+data.popularity+' 5/5</h4></div></span><div class="row"><p id="price">$'+data.price+'</p></div><div class="row"><a href="'+data.url+'"><button class="btn  btn-success btn-lg">Buy</button></a></div><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p>';
+	      		data.popularity = '★★★★★';
+			return '<img id="prodPic" src="'+ data.image +'" alt="bestbuy item"><div class="row"><span id="popularity"><h4>'+data.popularity+' </h4></div></span><div class="row"><p id="price">$'+data.price+'</p></div><div class="row"><a href="'+data.url+'"><button class="btn  btn-success btn-lg">Buy</button></a></div><h1 id="title">'+data.name+'</h1><p id="description">'+data.description+'</p>';
 	     	}
 
 	       },
