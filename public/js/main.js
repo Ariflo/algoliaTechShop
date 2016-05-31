@@ -130,6 +130,29 @@ $(function() {
 	  })
 	);
 
+	search.addWidget(
+	  instantsearch.widgets.stats({
+	    container: '#stats'
+	  })
+	);
+
+	search.addWidget(
+	  instantsearch.widgets.sortBySelector({
+	    container: '#sort-by',
+	    autoHideContainer: true,
+	    indices: [{
+	      name: "tech_shop_data", label: 'Most popular'
+	    }, {
+	      name: "tech_shop_data" + '_price_asc', label: 'Lowest price'
+	    }, {
+	      name: "tech_shop_data" + '_price_desc', label: 'Highest price'
+	    }],
+	    cssClasses: {
+	  	root: "dropdown"
+	     }
+	  })
+	);
+
 	//call to start searc on page load
 	search.start();
 
