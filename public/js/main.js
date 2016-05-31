@@ -141,7 +141,7 @@ $(function() {
 	    container: '#sort-by',
 	    autoHideContainer: true,
 	    indices: [{
-	      name: "tech_shop_data", label: 'Most relevant'
+	      name: "tech_shop_data", label: 'Most popular'
 	    }, {
 	      name: "tech_shop_data" + '_price_asc', label: 'Lowest price'
 	    }, {
