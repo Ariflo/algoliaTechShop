@@ -3,6 +3,21 @@
 ##Objective
 This repository houses an example of an Algolia-based auto-completion menu for a genertic e-commerce tech goods site.
 
+##Features
+
+- Full JavaScript (based on jQuery, and Algolia instantsearch.js with REACT)
+- Results page refreshed as you type
+- Hits
+- Facets
+- Pagination
+- Relevant results from the first keystroke
+- Typo-tolerance
+- Multiple sort orders
+- By Popularity
+- By Highest Price
+- By Lowest Price
+- Backup search parameters in the URL
+
 ##Access the Site
 A complete version of this site has been deployed and can be viewed on this [gh-pages](http://ariflo.github.io/algoliaTechShop/) address.
 
