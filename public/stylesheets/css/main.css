@@ -46,7 +46,7 @@ html, body {
     font-size: 1.75em;
     float: right;
     position: absolute;
-    margin-left: 93%;
+    margin-left: 85%;
     top: 10px; }
   #searchBar #search-box {
     float: right;
@@ -241,3 +241,24 @@ html, body {
   padding-top: .5%;
   font-size: .5em;
   cursor: pointer; }
+
+#pwredLabel {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: .85em;
+  float: right;
+  margin: 0;
+  color: #ffffff;
+  position: absolute;
+  margin-left: 85%;
+  padding-top: 3px; }
+
+svg {
+  float: right;
+  padding-top: 2%;
+  margin: 0 2%;
+  height: 10%;
+  width: 5%;
+  max-width: 15em;
+  max-height: 10em;
+  z-index: 2000;
+  position: absolute; }
