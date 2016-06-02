@@ -8,8 +8,8 @@ $(function() {
 
 	// algolia instantsearch widgets
 	var search = instantsearch({
-	       appId: 'W8I2YD0GJC',
-	       apiKey: '861d0757703675d68f5a0f915072381b',
+	       appId: 'L309RTZ2UR',
+	       apiKey: '7b77008ea319b33cb25e7ecdca09cb33',
 	       indexName: 'tech_shop_data'
 	});
 
