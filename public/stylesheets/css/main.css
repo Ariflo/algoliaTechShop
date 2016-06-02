@@ -149,8 +149,8 @@ html, body {
   border-radius: 5px;
   border: solid #003B64;
   color: #003B64;
-  width: 25%;
-  max-width: 25em;
+  width: 28%;
+  max-width: 20em;
   position: absolute; }
 
 .categoryList, .brandsList, .typesList {
@@ -160,16 +160,20 @@ html, body {
   margin: 4%; }
 
 #priceMenu {
-  margin-left: 20%;
+  margin-left: 17%;
   width: 35%;
   max-width: 25em;
   padding: .5em 3em; }
 
 #brandsMenu {
-  margin-left: 37%; }
+  margin-left: 30%;
+  width: 18%;
+  max-width: 20em; }
 
 #typesMenu {
-  margin-left: 50%; }
+  margin-left: 37%;
+  width: 23%;
+  max-width: 20em; }
 
 .btn.btn-success {
   float: right;

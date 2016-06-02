@@ -205,8 +205,8 @@ html, body{
 	border-radius: 5px;
 	border: solid $secondary-base;
 	color: $secondary-base;
-	width: 25%;
-	max-width: 25em;
+	width: 28%;
+	max-width: 20em;
 	position: absolute;
 }
 
@@ -221,7 +221,7 @@ html, body{
 
 #priceMenu{
 	@extend #categoryMenu;
-	margin-left: 20%;
+	margin-left: 17%;
 	width: 35%;	
 	max-width: 25em;
 	padding: .5em 3em;
@@ -229,7 +229,9 @@ html, body{
 
 #brandsMenu{
 	@extend #categoryMenu;
-	margin-left: 37%;
+	margin-left: 30%;
+	width: 18%;
+	max-width: 20em;
 } 
 
 .brandsList{
@@ -238,7 +240,10 @@ html, body{
 
 #typesMenu{
 	@extend #categoryMenu;
-	margin-left: 50%;
+	margin-left: 37%;
+	width: 23%;
+	max-width: 20em;
+
 }
 
 .typesList{
