@@ -160,8 +160,8 @@ $(function() {
 
 	//category menu animations
 	$('.categoryLink').on("click", function () {
-		$('#categoryMenu').css("display", "block");
-	});	
+		$('#categoryMenu').toggle();
+	});		
 
 	$('#categoryMenu').on('mouseover', function(){
 		$('#categoryMenu').css("display", "block");
@@ -174,7 +174,7 @@ $(function() {
 
 	//price menu animations
 	$('.priceLink').on("click", function () {
-		$('#priceMenu').css("display", "block");
+		$('#priceMenu').toggle();
 	});	
 
 	$('#priceMenu').on('mouseover', function(){
@@ -183,12 +183,13 @@ $(function() {
 
 	$('#priceMenu').on('mouseout', function(){
 		$('#priceMenu').css("display", "none");
-	});	
+	});
+	
 
 
 	//brand menu animations
 	$('.brandLink').on("click", function () {
-		$('#brandsMenu').css("display", "block");
+		$('#brandsMenu').toggle();
 	});	
 
 	$('#brandsMenu').on('mouseover', function(){
@@ -197,11 +198,11 @@ $(function() {
 
 	$('#brandsMenu').on('mouseout', function(){
 		$('#brandsMenu').css("display", "none");
-	});
+	});	
 
 	//types menu animations
 	$('.typeLink').on("click", function () {
-		$('#typesMenu').css("display", "block");
+		$('#typesMenu').toggle();
 	});	
 
 	$('#typesMenu').on('mouseover', function(){
@@ -210,5 +211,6 @@ $(function() {
 
 	$('#typesMenu').on('mouseout', function(){
 		$('#typesMenu').css("display", "none");
-	});
+	});	
+
 }); 

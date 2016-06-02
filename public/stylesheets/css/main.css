@@ -25,7 +25,13 @@ html, body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5em;
   margin: 0 3%;
-  color: #ffffff; }
+  color: #ffffff;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */ }
   .categoryLink:hover, .priceLink:hover, .brandLink:hover, .typeLink:hover {
     transition: 0.5s ease;
     border-bottom: 2px solid #FF686B;
