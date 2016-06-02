@@ -40,4 +40,8 @@ Then launch the site locally with gulp:
 npm run gulp --build-dev
 ```
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> gh-pages
  

@@ -25,7 +25,13 @@ html, body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5em;
   margin: 0 3%;
-  color: #ffffff; }
+  color: #ffffff;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */ }
   .categoryLink:hover, .priceLink:hover, .brandLink:hover, .typeLink:hover {
     transition: 0.5s ease;
     border-bottom: 2px solid #FF686B;
@@ -51,7 +57,9 @@ html, body {
   #searchBar #search-box {
     float: right;
     width: 30%;
+    max-width: 30em;
     margin-top: 4px;
+    margin-right: .02%;
     border-radius: 5px;
     color: #035E7B;
     font-family: "didot";
@@ -143,8 +151,8 @@ html, body {
   border-radius: 5px;
   border: solid #003B64;
   color: #003B64;
-  width: 25%;
-  max-width: 25em;
+  width: 28%;
+  max-width: 20em;
   position: absolute; }
 
 .categoryList, .brandsList, .typesList {
@@ -154,16 +162,20 @@ html, body {
   margin: 4%; }
 
 #priceMenu {
-  margin-left: 20%;
+  margin-left: 17%;
   width: 35%;
   max-width: 25em;
   padding: .5em 3em; }
 
 #brandsMenu {
-  margin-left: 37%; }
+  margin-left: 30%;
+  width: 18%;
+  max-width: 20em; }
 
 #typesMenu {
-  margin-left: 50%; }
+  margin-left: 37%;
+  width: 23%;
+  max-width: 20em; }
 
 .btn.btn-success {
   float: right;
